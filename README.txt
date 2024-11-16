@@ -13,6 +13,15 @@ containing difference firmware to what's expeced by the A100.
 
 Some useful links:
 
+Monitor Audio User Manual:
+https://www.monitoraudio.com/site/assets/files/20020/a100-manual-en.pdf
+
+Monitor Audio v639 Firmware:
+https://web.archive.org/web/20160505231108if_/http://ca2.monitoraudiocdn.com/downloads/firmware/A100-Firmware-v639.zip?mtime=20150529123549
+
+AVForums thread that contains a copy of the v639 firmware:
+https://www.avforums.com/threads/monitor-audio-a100-owner-experience.1910441/page-3#post-27048179
+
 FCC Documentation:
 https://fcc.report/FCC-ID/PPQ-CX8703MB/2117592.pdf
 
