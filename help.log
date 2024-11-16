@@ -1,0 +1,1939 @@
+sds://>help
+### Available Commands ###
+help                 - displays all available commands
+JBRemote             -  JB REMOTE COMMANDS
+ave                  - ave shell commands
+avr                  - avr test command
+bat                  - bat <batch-name>   executes commands written in <batch-name>
+btb                  - btb test commands
+cd                   - cd <dir> - changes current directory to <dir>
+clear                - clear shell history
+dbgprt               - debug print commands
+drc                  - drc [verbose | lines n | refresh n | spi [on|off] ]
+fburn                - flash burn commands
+filetransfer         - File Transfer
+get                  - get [-e] <attributename> - reads value and type of <attributename>
+guard                - guard test
+icb                  - ipod content browser
+iperf                - The TCP/UDP Bandwidth Measurement Tool
+ipod                 - Serial iPod access
+ipodauth             - ipod authentication coprocessor
+ls                   - ls [-r|-n|-e|-v] - shows content of (current) directory
+lui                  - LocalUi
+napster              - napster service test connect
+nc                   - nc[play|stop|pause|stat|show]
+net                  - networking (TCP/IP)
+netcfg               - print network settings
+netgen               - network generation (dynamic configuration)
+ntp                  - Ntp
+os                   - KnOS commands
+persparam            - persparam rd <name>             : read integer (name = 4 characters)
+          rds <name>            : read string (name = 4 characters)
+          rdss <name>           : read string (name = string)
+          wr <name> <value>     : write integer (name = 4 characters)
+          wrs <name> <value>    : write string (name = 4 characters)
+          wrss <name> <value>   : write string (name = string)
+          wrb <name> <hex-str>  : write binary string (name = 4 characters, hex-string eg. 0xafc9f0)
+          wrbs <name> <hex-str> : write binary string (name = string, hex-string eg. 0xafc9f0)
+          clr <name>            : clear integer (name = 4 characters)
+          clrs <name>           : clear string (name = 4 characters)
+          check                 : check and update default parameters
+          reset                 : reset parameters to default
+
+ping                 - ping <ip-address>
+probe                - probe <ip-address>
+pwd                  - pwd - shows the complete currently used path
+rd                   - rd <addr> <count> [b|h] - reads <count> values starting at <addr> (b=8bit, h=16bit)
+reg                  - reg test command
+rtp                  - rtp commands
+set                  - set <attributename> <attributevalue> - writes <attributevalue> to config <attributename>
+shell                - shell [-b|-i|-o|-s] - shell configuration
+spilist              - print spi list
+spilog               - print spi log
+ssdp                 - UPNP/SSDP client control [enable, disable, send, setVerbose(x)]
+sys                  - System commands
+test                 - Test commands
+upnp                 - UPNP control point [help]
+usb                  - commands related to USB
+usbd                 -  usbd
+waaed                - waaed help...
+wpa                  - wpa_supplicant cli
+wr                   - wr <addr> <value> [b|h] - writes <value> to <addr> (b=8bit, h=16bit)
+
+
+
+
+sds://help JBRemote
+---- OVERVIEW ----
+JBRemote             -  JB REMOTE COMMANDS
+---- DESCRIPTION ----
+executes 'JBRemote' command
+
+
+
+
+sds://>help ave
+---- OVERVIEW ----
+ave                  - ave shell commands
+ave iso              - ave iso shell commands
+ave pool             - ave stream block pool shell commands
+ave thread           - ave thread shell commands
+---- DESCRIPTION ----
+executes 'ave' command
+
+
+
+
+sds://>help ave iso
+---- OVERVIEW ----
+ave iso              - ave iso shell commands
+ave iso calcdb       - calculates db values
+ave iso cfg          - set ISOConfig values
+ave iso close        - close ISOLink if not used by thread
+ave iso if           - sets HW AV interfaces
+ave iso info         - shows values of an isoConfig
+ave iso open         - open new ISOLink
+ave iso port         - sets HW AV ports
+ave iso reopen       - close and open ISOLink if not used by thread
+ave iso setup        - setup ISOLink
+ave iso start        - start ISOLink
+ave iso stop         - stop ISOLink
+---- DESCRIPTION ----
+executes 'iso' command
+
+
+
+
+sds://>help ave pool
+---- OVERVIEW ----
+ave pool             - ave stream block pool shell commands
+ave pool assign      - assign stream block pool to ISOConfig
+ave pool close       - delete streamBlockPool
+ave pool create      - create new stream block pool
+---- DESCRIPTION ----
+executes 'pool' command
+
+
+
+
+sds://>help ave thread
+---- OVERVIEW ----
+ave thread           - ave thread shell commands
+ave thread check     - check, if thread is running
+ave thread close     - stop thread
+ave thread flag      - set flag
+ave thread flagassert - show flag of ave thread
+ave thread mk        - create new ave thread
+ave thread start     - start created thread
+ave thread stat      - show counters of thread
+ave thread stop      - stop thread
+---- DESCRIPTION ----
+executes 'thread' command
+
+
+
+
+sds://>help ave thread stop
+---- OVERVIEW ----
+ave thread stop      - stop thread
+---- DESCRIPTION ----
+  <nr>                  stop thread with handle <nr>
+
+
+
+
+sds://>help avr
+---- OVERVIEW ----
+avr                  - avr test command
+---- DESCRIPTION ----
+avr init              : avr init
+avr setTitle <name>   : set avr title
+avr setURL <URL>      : set avr URL
+avr setMime  <mime>   : set avr mime
+avr sendDRC  <drc>    : send drc data
+avr sendJBRC  <jbr>    : send jbr commands
+
+
+
+
+
+sds://>help bat
+---- OVERVIEW ----
+bat                  - bat <batch-name>   executes commands written in <batch-name>
+---- DESCRIPTION ----
+  Usage: bat <batch-name>  TAB-completion supported
+  Arguments:
+    batch-name:    name of the leaf which contains commands to be executed
+                   (max. recursion depth = 5)
+  Example:
+    bat "cne/Shell/cne/Shell/"
+
+
+
+
+sds://>help btb
+---- OVERVIEW ----
+btb                  - btb test commands
+---- DESCRIPTION ----
+executes 'btb' command
+
+
+
+
+sds://>help cd
+---- OVERVIEW ----
+cd                   - cd <dir> - changes current directory to <dir>
+---- DESCRIPTION ----
+  usage: cd <dir>
+  TAB-completion supported
+  Example:
+    cd cne/USB
+
+
+
+
+
+sds://>help clear
+---- OVERVIEW ----
+clear                - clear shell history
+---- DESCRIPTION ----
+
+
+
+
+
+sds://>help dbgprint
+### Available Commands ###
+help                 - displays all available commands
+JBRemote             -  JB REMOTE COMMANDS
+ave                  - ave shell commands
+avr                  - avr test command
+bat                  - bat <batch-name>   executes commands written in <batch-name>
+btb                  - btb test commands
+cd                   - cd <dir> - changes current directory to <dir>
+clear                - clear shell history
+dbgprt               - debug print commands
+drc                  - drc [verbose | lines n | refresh n | spi [on|off] ]
+fburn                - flash burn commands
+filetransfer         - File Transfer
+get                  - get [-e] <attributename> - reads value and type of <attributename>
+guard                - guard test
+icb                  - ipod content browser
+iperf                - The TCP/UDP Bandwidth Measurement Tool
+ipod                 - Serial iPod access
+ipodauth             - ipod authentication coprocessor
+ls                   - ls [-r|-n|-e|-v] - shows content of (current) directory
+lui                  - LocalUi
+napster              - napster service test connect
+nc                   - nc[play|stop|pause|stat|show]
+net                  - networking (TCP/IP)
+netcfg               - print network settings
+netgen               - network generation (dynamic configuration)
+ntp                  - Ntp
+os                   - KnOS commands
+persparam            - persparam rd <name>             : read integer (name = 4 characters)
+          rds <name>            : read string (name = 4 characters)
+          rdss <name>           : read string (name = string)
+          wr <name> <value>     : write integer (name = 4 characters)
+          wrs <name> <value>    : write string (name = 4 characters)
+          wrss <name> <value>   : write string (name = string)
+          wrb <name> <hex-str>  : write binary string (name = 4 characters, hex-string eg. 0xafc9f0)
+          wrbs <name> <hex-str> : write binary string (name = string, hex-string eg. 0xafc9f0)
+          clr <name>            : clear integer (name = 4 characters)
+          clrs <name>           : clear string (name = 4 characters)
+          check                 : check and update default parameters
+          reset                 : reset parameters to default
+
+ping                 - ping <ip-address>
+probe                - probe <ip-address>
+pwd                  - pwd - shows the complete currently used path
+rd                   - rd <addr> <count> [b|h] - reads <count> values starting at <addr> (b=8bit, h=16bit)
+reg                  - reg test command
+rtp                  - rtp commands
+set                  - set <attributename> <attributevalue> - writes <attributevalue> to config <attributename>
+shell                - shell [-b|-i|-o|-s] - shell configuration
+spilist              - print spi list
+spilog               - print spi log
+ssdp                 - UPNP/SSDP client control [enable, disable, send, setVerbose(x)]
+sys                  - System commands
+test                 - Test commands
+upnp                 - UPNP control point [help]
+usb                  - commands related to USB
+usbd                 -  usbd
+waaed                - waaed help...
+wpa                  - wpa_supplicant cli
+wr                   - wr <addr> <value> [b|h] - writes <value> to <addr> (b=8bit, h=16bit)
+
+
+
+
+sds://>help dbgprt
+---- OVERVIEW ----
+dbgprt               - debug print commands
+---- DESCRIPTION ----
+show   shows all the values
+set    changes the filter value
+
+
+
+
+
+sds://>help dbgprt show
+---- OVERVIEW ----
+dbgprt               - debug print commands
+---- DESCRIPTION ----
+show   shows all the values
+set    changes the filter value
+
+
+
+
+
+sds://>dbgprt show
+ModuleName                                           UseCount DebugLevel TraceLevel
+------------------------------------------------------------------
+                                                            1          2          2
+"SSLService"                                                1          1          1
+"USBInputBlockProcessor"                                    1          2          2
+"USB_OUTPutProcessor"                                       1          2          2
+AACStreamProcessor                                          1          2          2
+AVRPlayerServiceImpl                                        1          1          1
+AlbumArtImageRetreiverAirtunes                              1          2          2
+AlbumArtImageRetreiverHttp                                  1          2          2
+AlbumArtImageRetreiverId3                                   1          2          2
+AlbumArtOverRR                                              1          5          5
+AttributeContainer                                          1          2          2
+AudioHWService                                              2          3          3
+AutoIP                                                      3          3          3
+AvAudioInputProcessor/Fifo                                  1       ffff       ffff
+AvAudioInputProcessor/Packet                                1       ffff       ffff
+AvAudioOutputProcessor/Fifo                                 1       ffff       ffff
+AvAudioOutputProcessor/Packet                               1       ffff       ffff
+CB/IpodVideoContentBrowser                                  1          1          1
+COUNTED_POINTER_DEBUG_MODULE                                1          3          3
+ClosedCaptionMetainfoService                                1          4          4
+CommunicationSettingsServiceImpl                            1          1          1
+CountedPointerTest                                          1          3          3
+CycleTimeAccessor                                           1          2          2
+DeFramerStreamProcess                                       1          4          4
+DeFramerStreamProcessor                                     1          2          2
+DecoderDataHandler                                          1          2          2
+EDMP/NetCfgOverSpi                                          1          2          2
+FileTransfer/FileTransferService                            1          5          5
+FileTransfer/RemoteRegCtrldFileTransferService              1          5          5
+FileTransfer/RemoteRegXModemProtocol                        1          5          5
+FileUsb                                                     1          1          1
+FlacStreamProcessor                                         1          1          1
+FlashBurn                                                   1          2          2
+GENAService                                                 1          1          1
+HalHWService                                                1          4          4
+HandlerResultProcess                                        1          2          2
+IIsoOutputStreamProcessor/VideoOutputProcessor              1       ffff       ffff
+IPodUSBReceiver                                             2          2          2
+ISOStreaming                                                1       ffff       ffff
+InputStreamProcessor/AvAudio                                1       ffff       ffff
+InterfaceManager                                            1          3          3
+JBRemoteCtrl                                                1          2          2
+KnOSStreamDevice/StreamDeviceUSBDbgModul                    1          3          3
+Lastfm/NapManager                                           1          5          5
+MP3StreamProcessor                                          1          1          1
+NapAudioEnginePp                                            1          2          2
+NapAvPortOutput                                             1          2          2
+NapCore                                                     1          2          2
+NapCore/NapCoreShellCommand                                 1          2          2
+NapCoreStateMachine                                         1          2          2
+NapDecoder                                                  1          2          2
+NapDecoderProcessor                                         1          2          2
+NapIsoStreamOutput                                          1          2          2
+NapManager                                                  1          1          1
+NapManager/PlaylistParser                                   1          2          2
+NapManagerThread                                            1          2          2
+NapReceiver                                                 1          2          2
+NetworkDriverSystemData                                     3          3          3
+NetworkingSystemData                                        2          3          3
+Observable                                                  1          3          3
+OutputStreamProcessor/AvAudio                               1       ffff       ffff
+PAR/MemoryBlob                                              1          1          1
+Pandora/NapManager                                          1          2          2
+Player/UINullPlayer                                         1          1          1
+Player/iPodPlayer                                           1          1          1
+PlaylistRetriever                                           1          2          2
+PlaylistRetriever/HttpPlaylistRetriever                     1          2          2
+PowerManager                                                2          3          3
+RDMFS/USBStackAdapt                                         1          3          3
+RDMFSModule                                                 1          1          1
+RTPTimeServiceImpl                                          1          2          2
+RadeaClient_DebugModule                                     1          2          2
+RemoteAddressSpace                                          1          1          1
+RemoteCommandBufferImpl                                     1          1          1
+RemoteRegister                                              1          1          1
+RemoteViewRenderer                                          1          2          2
+SerializedSCI                                               2          3          3
+ShellHSMHost                                                1          2          2
+SiriusMetaInfoProcessor                                     1          2          2
+SluWlanControl                                              1          3          3
+StreamDevMgr                                                2          2          2
+StreamDevMgr/AlwaysRunState                                 1          2          2
+StreamDevMgr/DataLink                                       1          2          2
+StreamDevMgr/ExtIsoConfig                                   1          2          2
+StreamDevMgr/IdleState                                      1          2          2
+StreamDevMgr/MainPath                                       1          2          2
+StreamDevMgr/OffState                                       1          2          2
+StreamDevMgr/RunningState                                   1          2          2
+StreamDevMgr/SubPath                                        1          2          2
+StreamDevMgr/TrySynchMutedState                             1          2          2
+StreamDevice                                                1       ffff       ffff
+StreamDevice/SuluAvDeviceSignalDetection                    3          3          3
+StreamDevice/SuluAvPort                                     1          3          3
+StreamDevice/SuluAvPort/SuluCUEngine                        1          3          3
+StreamDevice/SuluStreamDeviceAv                             1          3          3
+StreamDevice/SuluTGenAVDevice                               1          2          2
+StreamDevice/TGenSysDevice                                  1          2          2
+SuluLCDDevice                                               1       ffff       ffff
+SuluUSBBusDriverImpl                                        1          2          2
+SuluWLAN                                                    1          2          2
+SuluWlanDevice                                              1          5          5
+SystemData                                                  2          3          3
+SystemDataServiceImpl                                       5          3          3
+TELNET_SHELL_MODULE                                         1       ffff       ffff
+TVService/TVServiceImpl                                     1          1          1
+Threads                                                     2          3          3
+UICtrl                                                      1          1          1
+UICtrl/CBEvtHandler                                         1          1          1
+UICtrl/HWInterface                                          1          1          1
+UICtrl/IRHandler                                            1          1          1
+UICtrl/NWConnectionHandlerWrapper                           1          1          1
+UICtrl/NapHandler                                           1          1          1
+UICtrl/PowerClient                                          1          1          1
+UICtrl/RSDBUpdateEvtHandler                                 1          1          1
+UICtrl/TimerEvtHandler                                      1          1          1
+UICtrl/UIDeviceNameEvtHandler                               1          1          1
+UICtrl/UISiteScanEvtHandler                                 1          1          1
+UICtrl/UIiPodControlEvtHandler                              1          1          1
+UIMgr                                                       1          1          1
+UIMgr/AirTunesModeHandler                                   1          1          1
+UIMgr/BrowseModeHandler                                     1          1          1
+UIMgr/ConfigModeHandler                                     1          1          1
+UIMgr/DefaultModeHandler                                    1          3          3
+UIMgr/HomeModeHandler                                       1          1          1
+UIMgr/MsgModeHandler                                        1          1          1
+UIMgr/PicturePlayModeHandler                                1          1          1
+UIMgr/PlayModeHandler                                       3          1          1
+UIMgr/StandbyModeHandler                                    1          1          1
+UIMgr/UIRemoteControlOnlyModeHandler                        1          1          1
+UIMgr/UIStateVariable                                       1          1          1
+UIMgr/WelcomeModeHandler                                    1          1          1
+UINetworkConnectionHandler                                  1          1          1
+UIToolkit                                                   1          1          1
+USB_Host_Module                                             1          2          2
+USB_MTP_Module                                              1          2          2
+USB_MassStorage_Module                                      1          2          2
+USB_Stack_Module                                            1       ffff       ffff
+VorbisStreamProcessor                                       1          3          3
+WMRolloverManager                                           1          1          1
+WMSClient                                                   3          1          1
+WMSClientProcess                                            1          1          1
+WMSClientProcessor                                          1          1          1
+WMSStreamChooser                                            1          1          1
+WaaRemoteCtrl                                               1          2          2
+cneSystemDataMgr                                            6          2          2
+iPodCB/IPodBrowseCfg                                        1          2          2
+iPodConfigurationData                                       1          3          3
+iPodControl/DigAudio                                        1          2          2
+iPodControl/DisplayRemote                                   1          1          1
+iPodControl/Extended                                        1          1          1
+iPodControl/GeneralLingoHandler                             1          1          1
+iPodControl/IPodAuthCoprocessorV2Impl                       1          1          1
+iPodControl/Serial                                          3          1          1
+iPodControl/Service                                         1          3          3
+iPodControl/SimpleRemote                                    1          1          1
+iPodControl/TelegramReceiver                                1          1          1
+iPodControl/iPodCommMgr                                     1          1          1
+iPodControl/iPodPersCfg                                     1          1          1
+iPodDevClient/Hid                                           2          3          3
+
+
+
+
+sds://>help drc
+---- OVERVIEW ----
+drc                  - drc [verbose | lines n | refresh n | spi [on|off] ]
+---- DESCRIPTION ----
+executes 'drc' command
+
+
+
+
+sds://>help fburn
+---- OVERVIEW ----
+fburn                - flash burn commands
+fburn bin            - bin
+fburn ebin           - ebin
+fburn img            - image
+fburn listFlashAddr  - list flash burn addresses
+fburn rd             - read
+---- DESCRIPTION ----
+executes 'fburn' command
+
+
+
+
+sds://>help fburn bin
+---- OVERVIEW ----
+fburn bin            - bin
+---- DESCRIPTION ----
+  <address>             address
+  <length>              length
+
+
+
+
+sds://>help fburn ebin
+---- OVERVIEW ----
+fburn ebin           - ebin
+---- DESCRIPTION ----
+  <flash_id>            flash identifier
+  <address>             address
+  <length>              length
+
+
+
+
+sds://>help fburn img
+---- OVERVIEW ----
+fburn img            - image
+---- DESCRIPTION ----
+executes 'img' command
+
+
+
+
+sds://>help fburn listFlashAddr
+---- OVERVIEW ----
+fburn listFlashAddr  - list flash burn addresses
+---- DESCRIPTION ----
+executes 'listFlashAddr' command
+
+
+
+
+sds://>fburn listFlashAddr
+FlashId		Start Address	End Address
+0		0x40000000	0x407fffff
+
+
+
+
+sds://>help fburn rd
+---- OVERVIEW ----
+fburn rd             - read
+---- DESCRIPTION ----
+  <flash_id>            flash identifier
+  <address>             address
+  <length>              length
+
+
+
+
+sds://>help filetransfer
+---- OVERVIEW ----
+filetransfer         - File Transfer
+---- DESCRIPTION ----
+executes 'filetransfer' command
+
+
+
+
+sds://>filetransfer
+USAGE:
+
+ > filetransfer <source_url> <dest_url>
+
+   supported combinations:
+   - filetransfer file://USB/0/filename mem://filename     (usb TO ram)
+   - filetransfer http://filepath/filename mem://filename  (http TO ram)
+   - filetransfer rr:// mem://filename                     (remote reg TO ram)
+   - filetransfer mem://filename rr://                     (ram TO remote reg)
+
+
+
+
+
+sds://>help get
+---- OVERVIEW ----
+get                  - get [-e] <attributename> - reads value and type of <attributename>
+---- DESCRIPTION ----
+  Usage: get [option] attributename
+  TAB-completion supported
+  Arguments:
+    attributename: name of the leaf
+    -e:            shows extended information
+    -b:            displays the value as binary
+    -s:            displays the value as string
+  Example:
+    get  cne/USB/EP1/Rx/FifoSize
+
+
+
+
+
+sds://>help guard
+---- OVERVIEW ----
+guard                - guard test
+---- DESCRIPTION ----
+executes 'guard' command
+
+
+
+
+sds://>help ipod
+---- OVERVIEW ----
+ipod                 - Serial iPod access
+---- DESCRIPTION ----
+iPod serial control shell commands
+ipod status              	: show some basic info
+ipod getname             	: get the name of the attached iPod
+ipod model                 : ipod model information dumped to shell
+ipod resetdb             	: reset DB selection
+ipod resetdbhier video|music : reset DB selection hierarchy
+ipod getnrrec [cat] 			: get nr. of categorized DB records
+                           	: cat = (art|alb|tra|pls|gen|com|ab|pod)
+ipod getdbrecs [cat] [start] [cnt] : get nr. of categorized DB records
+ipod select [cat] [index]	: select DB record at index in given category
+ipod selectsort [cat] [order] [index] : select sorted DB records at index in category
+                                        order = (art|alb|nam|pls|gen|com|def)
+ipod playcurrsel ([index])	: play curr selection
+ipod playpause|stop|next|prev|ff|rew|endffrew|nextchapter|prevchapter
+                           	: playback control commands
+ipod notify [on|off]         : receive play status change notifications
+ipod numplayingtracks        : get number of tracks in the playback engine
+ipod currtrackind            : get the db index of the currently playing track
+ipod playcurr [index]		: play the track at the given index from the playback engine list
+ipod getinfo [index]         : get the information of the indexed playing track
+ipod getpodname [index]      : get the podcast name of the indexed playing track
+ipod getreldate [index]      : get the release date of the indexed playing track
+ipod getdesc [index]         : get the description of the indexed playing track
+ipod getsonglyrics [index]   : get the song lyrics of the indexed playing track
+ipod getgenre [index]        : get the genre of the indexed playing track
+ipod getcomposer [index]     : get the composer of the indexed playing track
+ipod getartcount [index]     : get the artwork counts of the indexed playing track
+ipod getarttimes [index] [formatid] [startidx] [count]
+                             : get the artwork times of the indexed playing track
+ipod getartdata [index] [formatid] [timeoff]
+                             : get the artwork data of the indexed playing track
+ipod getartist [index]       : get the artist name of the indexed playing track
+ipod gettitle [index]        : get the title of the indexed playing track
+ipod getalbum [index]        : get the album name of the indexed playing track
+ipod gettrackinfo [index]    : get artist, album, title
+ipod getartfor               : get list of available artwork formats
+ipod getmonoinfo             : get mono display limits info
+ipod getcolorinfo            : get color display limits info
+ipod getshuffle              : get the current shuffle mode state
+ipod setshuffle [off|tra|alb]: set the shuffle mode
+ipod getrepeat               : get the current repeat mode state
+ipod setrepeat [off|one|all] : set the repeat mode
+ipod enteree                 : enter extended interface mode
+ipod exitee                  : exit extended interface mode
+ipod intmode                 : get ipod's current interface mode
+ipod sendsimple [buttonbits] : send simple remote buttons
+ipod setdispimg              : set diplay image at attached mode
+ipod attached [yes|no]		  : fake an iPod attach/detach event
+ipod setabspeed [slow|nor|fast] [all|current] [restore|keep]
+                             : set the audiobook speed for current or all audiobooks
+                               after disconnection, the setting can be kept or restored to original
+ipod getabspeed              : get ipod's current audiobook speed
+ipod getpref                 : get ipod preferences
+ipod setpref [class] [value] : set ipod preferences
+ipod setviddel [value]       : set iPod video delay for Digital Audio in ms
+ipod follow [on|off]			: similar to NAP follow
+ipod test [test] [num]       : perform [test] a num of times
+ipod detection read          : report the number of iPod connection events that occurred
+ipod detection clear         : set the number of iPod connection events to 0
+ipod detection state         : report the state of the iPod (attached/detached)
+ipod accessory [on|off]      : turns the iPod acessory pin on and off
+ipod video [encoder|ipod]    : toggles the video source between the iPod and the video encoder
+ipod adc [on|off]            : turns the iPod audio ADC on or off
+ipod setremnotify [rem mask]: enable display remote notification
+ipod setstateinfo [pay load]: set ipod state info
+                               test = getname
+
+
+
+
+
+sds://>help ipodauth
+---- OVERVIEW ----
+ipodauth             - ipod authentication coprocessor
+---- DESCRIPTION ----
+iPod Authenticate Coprocessor shell commands
+ipodauth devid                      : get device id
+ipodauth certsize                   : get certificate size
+ipodauth cert                       : get certificaten
+ipodauth gensig                     : generate signature
+ipodauth reset                      : reset coprocessor
+ipodauth test [test] [num]          : perform [test] a num of times
+                                      test = (getcert|getdevid)
+
+
+
+
+
+sds://>help icb
+---- OVERVIEW ----
+icb                  - ipod content browser
+---- DESCRIPTION ----
+IpodVideoContentBrowser shell commands
+icb gotop             : Go to the top level in the hierarchy strcture
+icb getcount          : Get the number of items in the current list
+icb setindex  [index] : Set virtual cursor to a position in the list
+icb getindex          : Get current index in the current list
+                        (0<=index<itemCount)
+icb canplay           : Indicates if the current itemIndex item can be
+                        played
+icb hasparent         : Indicates if the current itemIndex has a parent list
+icb haschilds         : Indicates if the current itemIndex item has a child
+                        list
+icb browseparent      : Go to parent list of the currently selected item
+icb browsechild       : Go to child list of the currently selected item
+icb getcurlevel       : Returns the current level number (top level = 0)
+icb getname           : Retrieve the (display friendly) name of the current
+                        item
+icb geturl            : Retrieve the URL of the current item
+icb getlevelname [lvl]: Retrieve the name of the level, given as param
+icb dump              : Print the values of all internal variables.
+
+
+
+
+
+sds://>help iperf
+---- OVERVIEW ----
+iperf                - The TCP/UDP Bandwidth Measurement Tool
+---- DESCRIPTION ----
+Usage: iperf [-s|-c host] [options]
+Try `iperf --help' for more information.
+
+
+
+
+
+sds://>help ls
+---- OVERVIEW ----
+ls                   - ls [-r|-n|-e|-v] - shows content of (current) directory
+---- DESCRIPTION ----
+  Usage: List information of sds parameters: name(s) and value(s)
+  TAB-completion supported
+  Arguments:
+    Path of directory, no path = current directory
+  Options:
+    -r = recursive
+    -n = with current dir name
+    -e = extended output
+    -v = shows only name and its value
+    -b = shows the values in binary form
+    -s = shows the values in string form
+  Example:
+    ls -e -r cne/USB
+
+
+
+
+
+sds://>help lui
+---- OVERVIEW ----
+lui                  - LocalUi
+---- DESCRIPTION ----
+executes 'lui' command
+
+
+
+
+sds://>help napster
+---- OVERVIEW ----
+napster              - napster service test connect
+---- DESCRIPTION ----
+executes 'napster' command
+
+
+
+
+sds://>help nc
+---- OVERVIEW ----
+nc                   - nc[play|stop|pause|stat|show]
+---- DESCRIPTION ----
+play <id>        id:0..N, "show" displays all available url's
+emph <n>         set emphasis (0=off, 1=50/15, 3=J.17)
+stat             show NapCore statistics
+show             shows urls to play with "play"
+
+
+
+
+
+sds://>help net
+---- OVERVIEW ----
+net                  - networking (TCP/IP)
+---- DESCRIPTION ----
+executes 'net' command
+
+
+
+
+sds://>net help
+Networking "general" commands:
+   help     - help with menus
+   state    - show current station setup
+   delay    - set milliseconds to wait between pings
+   host     - set default active IP host
+   length   - set default ping packet length
+   setip    - set interface IP address
+   setmc    - add mcast address
+   delmc    - remove mcast address
+Also try 'help [general|diagnostic|ping]'
+
+
+
+
+sds://>help netcfg
+---- OVERVIEW ----
+netcfg               - print network settings
+---- DESCRIPTION ----
+executes 'netcfg' command
+
+
+
+
+sds://>netcfg
+Status of Network Interface 0:
+==========================================
+ERROR State=0
+	unavailable
+
+----------- begin IP settings ---------
+DHCP-Flag        = true
+IP-Address       = 0.0.0.0
+NetMask          = 255.0.0.0
+Gateway          = 0.0.0.0
+DNS1             = 0.0.0.0
+DNS2             = 0.0.0.0
+DNS3             = 0.0.0.0
+IP Config Nr     = 1
+DriverName       = WLAN
+MacAddress       = 00:00:00:00:00:00
+CneName          = WlanCfg
+------------ end IP settings ----------
+
+----------- begin proxyServer---------
+ProxyServer:
+PortNumber: 0
+DISABLED
+------------ end proxyServer----------
+==========================================
+==========================================
+"WlControlService" service interface:
+==========================================
+Network mode     = BSS (managed)
+Phy type         = 11b
+BSSID            = 00:00:00:00:00:00
+==========================================
+
+
+
+
+sds://>help netgen
+---- OVERVIEW ----
+netgen               - network generation (dynamic configuration)
+---- DESCRIPTION ----
+executes 'netgen' command
+
+
+
+
+sds://>help ntp
+---- OVERVIEW ----
+ntp                  - Ntp
+---- DESCRIPTION ----
+executes 'ntp' command
+
+
+
+
+sds://>help os
+---- OVERVIEW ----
+os                   - KnOS commands
+os blk               - show system memory blocks
+os byte              - show system memory bytes
+os cne               - show cne statistics
+os evt               - show system events
+os flg               - show system event flags
+os free              - do free
+os load              - show system load <time>
+os map               - show system memory map [tcmd|ahb|heap|heapc] [used|leak|reset|free]
+os mchk              - check memory [nodump]
+os mlc               - do malloc
+os mseg              - show memory segments
+os mtype             - show memory type of address
+os q                 - show system queues [reset]
+os running           - go to running mode
+os sem               - show system semaphores
+os shell             - diverts the shell input/output to an other device
+os sleep             - system sleeps for given time
+os standby           - go to standby mode
+os suspend           - go to suspend mode
+os th                - show system threads
+os timer             - show system timers
+os timestamp         - prints current up-time <ms> and time interval since last call
+os uartcfg           - uart control command
+os wp                - deals with software watchpoints
+---- DESCRIPTION ----
+executes 'os' command
+
+
+
+
+sds://>help os blk
+---- OVERVIEW ----
+os blk               - show system memory blocks
+---- DESCRIPTION ----
+executes 'blk' command
+
+
+
+
+sds://>os cne
+--- Cne Stats ---
+Memory type:
+  Parallel Flash (flash sector size= 0x10000=65536)
+Factory Default:
+  addr= 0x00020080...0x3007f  size= 0x10000=65536 B
+  number of flash sectors used= 1
+User spaces 1 and 2:
+  addr= 0x00030000...0x4ffff  size= 0x20000=131072 B
+  number of flash sectors used= 2
+Attribute space:
+  start=0x00020080  Attributes: size=64552 B  count=1540
+Active Space:
+  start=0x00030000   size=65536 B  status=ACTIVE
+  free area: pFirst=0x0003011a  size=65252 B
+Free Space:
+  start=0x00040000   size=65536 B  status=FREE
+  free area: pFirst=0x00040002  size=65532 B
+i/o Handles:
+  open=71
+  total=128
+Open i/o handles:
+  [00]
+  [01] cneGroup
+  [02] cneGroup
+  [03] cneGroup
+  [04] cneGroup
+  [05] cneGroup
+  [06] cneGroup
+  [07] UpnpContainerFilter
+  [08] SlideShow
+  [09] PSM
+  [10] TV_OUT
+  [11] AirTunes
+  [12] CNE_TEST
+  [13] RenderPicture
+  [14] FsChangeTimeout
+  [15] dev
+  [16] JumpToCB
+  [17] ContentBrowserSwitch
+  [18] JBRemote
+  [19] Capabilities
+  [20] FirmwareUpdate
+  [21] FirmwareDownload
+  [22] ResourceManager
+  [23] UartSwitch
+  [24] SystemHost
+  [25] CommunicationSettings
+  [26] OutputPlug
+  [27] NTP
+  [28] SystemClock
+  [29] USBHighSpeedMode
+  [30] RTC
+  [31] Application
+  [32] MocanaSSL
+  [33] Rhapsody
+  [34] RhapsodyDirect
+  [35] Sirius
+  [36] Napster
+  [37] Flickr
+  [38] Lastfm
+  [39] Pandora
+  [40] DTCP
+  [41] Cardea
+  [42] SnapProtocol
+  [43] LineIn
+  [44] Presets
+  [45] RadioNative
+  [46] BCORadioClient
+  [47] HistoryBrowser
+  [48] RDM
+  [49] MultiRadioStationDB
+  [50] Shell
+  [51] iPodAccInfo
+  [52] Ipod
+  [53] FMTuner
+  [54] AMTuner
+  [55] System
+  [56] USB
+  [57] UPnP
+  [58] Networking
+  [59] Networking/IpCfg
+  [60] Networking/DrvCfg
+  [61] Networking/DrvCfg/WlanCfg
+  [62] Networking/DrvCfg/WlanCfg/TxPower
+  [63] Networking/DrvCfg/WlanCfg/Profile0
+  [64] Networking/DrvCfg/WlanCfg/Profile1
+  [65] Application
+  [66] UPnP/MediaRenderer/ConnectionManager
+  [67] Application
+  [68] UPnP/MediaRenderer/AVTransport
+  [69] UPnP/MediaRenderer/RenderingControl
+  [70] Application/NetIF
+
+
+
+
+sds://>os mseg
+MEMORY SEGMENT BOUNDARIES
+=========================
+Segment: Heap cached
+         Start  : 0x6053c000
+         End    : 0x60fbe000
+         Size   : 0x00a82000
+         Length : 0x00008848
+         Limit  : 0x60544848
+         ZILimit: 0x6059fa08
+Segment: Heap non-cached
+         Start  : 0x70fce000
+         End    : 0x71000000
+         Size   : 0x00032000
+         Length : 0x00000000
+         Limit  : 0x70fce000
+         ZILimit: 0x70fce000
+Segment: UMR0 cached
+         Start  : 0x00400000
+         End    : 0x0040fa00
+         Size   : 0x0000fa00
+         Length : 0x000032f8
+         Limit  : 0x004032f8
+         ZILimit: 0x00404090
+Segment: UMR0 non-cached
+         Start  : 0x00500000
+         End    : 0x0050fa00
+         Size   : 0x0000fa00
+         Length : 0x00000000
+         Limit  : 0x00500000
+         ZILimit: 0x00500000
+
+
+
+
+sds://>os th
+ n                     name    pri state       cnt stackU  stackT stackStart
+ 1         supervisor stack                           676    1024
+ 2        user system stack                           236     384
+ 3                irq stack                           100     352
+ 4                fiq stack                             0      32
+ 5        abort undef stack                             0     128
+
+ 6      System Timer Thread  0/ 0/0 susp    332931    183    1024 0x00403c90
+ 7               coreThread  1/ 1/0 term         3
+ 8       CneCacheFlushTimer 24/24/1    q         1    171    4096 0x60622a00
+ 9           CuEngineUpdate 24/24/1    q         1    171    4096 0x60636800
+10       PowerManagerThread 24/24/1    q        21    527    4096 0x60637810
+11                Inet main 11/10/1  sem        67    855    4096 0x60646698
+12               clock tick 11/10/1sleep      8844    239    2048 0x606476a8
+13         PING application 11/10/1 susp         1     99     512 0x60647eb8
+14               WlanThread  9/ 9/1  sem        26   1999    4096 0x608dbab8
+15                WlanTimer 15/15/1sleep      7862    167    4096 0x608dcac8
+16       AutoIPStateMachine 24/24/1    q         1    171    3000 0x6092fd00
+17            WpaSupplicant 24/24/1sleep     80088   1011    4096 0x609308c8
+18WpaSupplicantWlConnection 24/24/1    q     32359   1623    4096 0x60931b18
+19      StreamDeviceMgrImpl 14/14/1    q        17    987    2048 0x60932b28
+20             Unmute Timer 24/24/1 evsu         1    131     512 0x60933338
+21     StreamDeviceObserver 24/24/1    q         6    203    1024 0x60933548
+22        SharedTimerThread  1/ 1/1    q     15459    327    4096 0x60933958
+23           USBDrvRxThread  4/ 4/1    q         2    155    2048 0x00404188
+24            RDMFS Functor 24/24/1    q         4    195    4096 0x60936ea8
+25             USBStackImpl  8/ 8/1    q         2    307    2048 0x60937eb8
+26        USBHostController 24/24/1    q         1    171    4096 0x60940850
+27   UPnP activation thread 24/24/1    q         2    219    4096 0x60941ad0
+28                 SsdpPort 24/24/1  sem         1    859    4096 0x60942ae0
+29           ReceiverThread  9/ 9/1    q         1    171    4096 0x60943af0
+30              ShellThread 24/24/1  rdy      2293   1235    8192 0x60945bb0
+31                PSMThread 24/24/1    q         3    179    3072 0x60948b40
+32         USBAdaptionLayer 24/24/1    q         9    503    4096 0x6094ca68
+33               GenaThread 24/24/1    q         1    171    2048 0x6094e030
+34          GenaEventThread 24/24/1  sem         1    403    2048 0x6094e840
+35            CDSRepository 24/24/1sleep      8121    663    3100 0x6094fdb8
+36                     Ssdp 24/24/1sleep      2618    435    1024 0x609563f8
+37      UpnpNotificationSvc 24/24/1 evsu         1    131    4096 0x60956b68
+38       UpnpContentBrowser 24/24/1    q         1    171    4096 0x60957b78
+39  NapContentManagerThread 24/24/1    q         1    171   10240 0x60959078
+40            NapCoreThread 23/23/1    q         2    171    4096 0x6095b888
+41         NapManagerThread 24/24/1    q         2    171    4096 0x6095c898
+42          NapOutputThread  9/ 9/1    q   4244464    335    4096 0x6095dab8
+43          Radea Processor 10/10/1    q         1    171    6144 0x609c3948
+44          RolloverManager  9/ 9/1    q         1    171    4072 0x609c53c8
+45        RtspSessionThread 24/20/1 susp         0     75    2048 0x609ced88
+46             ActiveSocket 24/20/1  sem         1    303    4096 0x609cf598
+47             ActiveSocket 24/20/1  sem         1    303    4096 0x609d05a8
+48             ActiveSocket 24/20/1  sem         1    303    4096 0x609d15b8
+49         RtspSessionTimer 24/24/1 evsu         2    147    1024 0x609d25c8
+50          RDMFS Processor  9/ 9/1    q         1    171    3072 0x609d4d10
+51          OverloadMonitor 23/23/1 evsu         1    107*    256 0x6095fb4c
+52             SPI Receiver  4/ 4/1  sem         2    203    4096 0x60b63f70
+53       SearchFwUrlHandler 24/24/1    q         1    171    5120 0x60b65238
+54         AVRPlayerService 22/22/1    q         1    171    6144 0x60b66a10
+55              Ipodioscomm 24/24/1    q         1    171    8000 0x60b68220
+56NewSelectedIpProfile_IpSt 26/26/1    q         1    171    2048 0x60b6d128
+57    Remote wifi test mode 24/24/1    q         1    171    4096 0x60b6f2c8
+58RemoteRegCtrldFileTransfe 24/24/1    q         1    171    2048 0x60b702d8
+59          Wr2_Application 24/24/1    q     14359   1355   10000 0x60b70ae8
+60                    Timer 24/24/1 evsu         1    131    4096 0x60b737d0
+61       PoolAllocCompactor 24/24/1 evsu         1    115    1024 0x60b74ff0
+62                    Timer 24/24/1 evsu         1    131    4096 0x60b77950
+63                    Timer 24/24/1 evsu         1    131    4096 0x60baab00
+64                    Timer 24/24/1 evsu         1    131    4096 0x60babb10
+65                    Timer 24/24/1 evsu         1    131    4096 0x60bacb20
+66                    Timer 24/24/1 evsu         1    131    4096 0x60bade00
+67                    Timer 24/24/1 evsu         1    131    4096 0x60baee10
+68                    Timer 24/24/1 evsu         1    131    4096 0x60bb0030
+69                    Timer 24/24/1 evsu         1    131    4096 0x60bb1040
+70                    Timer 24/24/1 evsu         1    131    4096 0x60bb2050
+71                    Timer 24/24/1 evsu         1    131    4096 0x60bb3060
+72                    Timer 24/24/1 evsu         1    131    4096 0x60bb4070
+73                    Timer 24/24/1 evsu         1    187    4096 0x60bb5488
+74UIRemoteControlOnlyModeHa 24/24/1    q         1    171    8000 0x60bb6fb8
+75UIRemoteControlOnlyModeHa 24/24/1    q         1    171    8000 0x60bb9118
+76               SsdpRecUDP 24/24/1  sem         1    851    4096 0x60bc2870
+77           SPI Command Th 21/21/1    q         1    171    6000 0x60bc6220
+78                WRCThread 24/24/1  sem      1650    615    7000 0x60bc79a0
+79         WRCUpdAllowEvtTm 24/24/1 evsu         1    131    4096 0x60bc9508
+80       PoolAllocCompactor 24/24/1 evsu         1    115    1024 0x60bca928
+81         RemoteCmdHandler 24/24/1    q         1    171    4096 0x60bcaf90
+82                 cmdTimer 24/24/1 evsu         1    131    4096 0x60bcbfa0
+83       UPnPMrServerThread 24/24/1    q         1    179    1500 0x60bccfb0
+84             UPnP Adapter 24/24/1sleep       777    179    4096 0x60bcd5a0
+85             UPnP Adapter 24/24/1sleep       772    179    4096 0x60bd05c0
+86            NtpReqHandler 26/26/1    q        43    587    4096 0x60bd17e8
+87            USBPlayDirect 26/26/1    q         1    171    2048 0x60bd27f8
+88         StreamStatusInfo 26/26/1    q         1    171    2048 0x60bd3008
+89          IpodSimpleEntry 24/24/1    q         1    171    8000 0x60bd5318
+90          iPodTelegramRec 21/20/1    q         1    171    4096 0x60c09a58
+91              Ipodioscomm 24/24/1    q         1    171    4096 0x60c0d288
+92         Ipodaccequalizer 24/24/1    q         1    171    4096 0x60c0e500
+93              iPodControl 22/20/1sleep     15630    587    4096 0x60c100d8
+94                iPodCBSvc 23/23/1    q         1    171    2048 0x60c110e8
+95                iPodCBSvc 23/23/1    q         1    171    2048 0x60c118f8
+96            NetworkStatus 24/24/1    q         1    171    4096 0x60c12400
+97             ipodObserver 24/24/1    q         2    171    4096 0x60c13410
+98             JBLinkThread 24/24/1sleep      7800    247    4096 0x60c14420
+99           JBRServiceInit 24/24/1    q         1    171    4096 0x60c15430
+100                 testipod 24/24/1 susp         0     75    4096 0x60c16440
+101          ConfigureiTunes 24/24/1    q         1    171    4096 0x60c17450
+102                Webserver 24/24/1  sem      3528   1387    4096 0x60c18460
+103          DeviceDiscovery 24/24/1    q         1    315    2048 0x60ca5818
+104ClosedCaptionMetainfoServ 24/24/1    q         1    171    4096 0x60ca6028
+105           EthernetDetect 26/24/1sleep       819    783    2400 0x60ca7038
+106       JBRemoteCtrlThread 24/24/1  sem      1641    623   10000 0x60ca7e50
+107       PoolAllocCompactor 24/24/1 evsu         1    115    1024 0x60caa980
+108           JBRJSONService 24/24/1    q      1674   1119    6144 0x60caad90
+109              JBRPairInit 24/24/1    q         1    819    4096 0x60cac5a0
+110                JBRCSInit 24/24/1    q         2    715    4096 0x60cad5b0
+111    JBR_XML_Parser_thread 24/24/1    q         1    171    4096 0x60cae5c0
+112            JBRGetHandler 24/24/1    q         1    171    4096 0x60cb02c8
+113             ipodOBServer 24/24/1 susp         0     75    4096 0x60cb1528
+114       PoolAllocCompactor 24/24/1 evsu         1    115    1024 0x60cb2948
+115  FileTransferShellThread 24/24/1    q         1    171    2048 0x60cb7d78
+                Totals                         35251  421344
+Stack usage warnings:  * = within 200 B of stack size  ** = within 100 B
+
+
+
+
+sds://>os timer
+ n                     name remaining [ms]    reInit [ms]
+ 1             FunctorTimer              0              0
+ 2        PowerManagerTimer           4998              0
+ 3           RTPTimeService            516            900
+ 4                ip_cticks            100            100
+ 5WpaSupplicantWlConnectionService_ConnectionTimeout           2128              0
+ 6      StreamDeviceAvTimer            100            100
+ 7              PllObserver             68            100
+ 8           IsPresentTimer              0              0
+ 9          SampleRateTimer              0              0
+10    USB Hub Manager Timer              0              0
+11                 PSMTimer              0              0
+12         FastForwardTimer              0              0
+13             NapCoreTimer              0              0
+14           DelayedNapStop              0              0
+15              PostFsDelay              0              0
+16          OverloadMonitor              0              0
+17            ViewCtrlTimer              0              0
+18     PlayModeHandlerTimer              0              0
+19PlayModeHandler_FastForwardTimer              0              0
+20             FunctorTimer            968           1000
+21            UISimpleTimer              0              0
+22 ConnectionReattemptTimer              0              0
+23             AVTTRansport              0              0
+24           IdpsRetryTimer              0              0
+25               umac_check           5392          30000
+
+
+
+
+sds://>os uartcfg
+---- OVERVIEW ----
+os uartcfg           - uart control command
+---- DESCRIPTION ----
+  <device> <nr>         device = [uart0|uart1...]
+                        nr = baudrate (e.g. 115200)
+
+
+
+
+sds://>help persparam
+---- OVERVIEW ----
+persparam            - persparam rd <name>             : read integer (name = 4 characters)
+          rds <name>            : read string (name = 4 characters)
+          rdss <name>           : read string (name = string)
+          wr <name> <value>     : write integer (name = 4 characters)
+          wrs <name> <value>    : write string (name = 4 characters)
+          wrss <name> <value>   : write string (name = string)
+          wrb <name> <hex-str>  : write binary string (name = 4 characters, hex-string eg. 0xafc9f0)
+          wrbs <name> <hex-str> : write binary string (name = string, hex-string eg. 0xafc9f0)
+          clr <name>            : clear integer (name = 4 characters)
+          clrs <name>           : clear string (name = 4 characters)
+          check                 : check and update default parameters
+          reset                 : reset parameters to default
+
+---- DESCRIPTION ----
+persparam rd <name>             : read integer (name = 4 characters)
+          rds <name>            : read string (name = 4 characters)
+          rdss <name>           : read string (name = string)
+          wr <name> <value>     : write integer (name = 4 characters)
+          wrs <name> <value>    : write string (name = 4 characters)
+          wrss <name> <value>   : write string (name = string)
+          wrb <name> <hex-str>  : write binary string (name = 4 characters, hex-string eg. 0xafc9f0)
+          wrbs <name> <hex-str> : write binary string (name = string, hex-string eg. 0xafc9f0)
+          clr <name>            : clear integer (name = 4 characters)
+          clrs <name>           : clear string (name = 4 characters)
+          check                 : check and update default parameters
+          reset                 : reset parameters to default
+
+
+
+
+
+sds://>help ping
+---- OVERVIEW ----
+ping                 - ping <ip-address>
+---- DESCRIPTION ----
+executes 'ping' command
+
+
+
+
+sds://>help probe
+---- OVERVIEW ----
+probe                - probe <ip-address>
+---- DESCRIPTION ----
+executes 'probe' command
+
+
+
+
+sds://>help pwd
+---- OVERVIEW ----
+pwd                  - pwd - shows the complete currently used path
+---- DESCRIPTION ----
+  usage: pwd
+
+
+
+
+
+sds://>help rd
+---- OVERVIEW ----
+rd                   - rd <addr> <count> [b|h] - reads <count> values starting at <addr> (b=8bit, h=16bit)
+---- DESCRIPTION ----
+  usage: rd <addr> <count> [b|h]
+    addr   start address
+    count  number of quadlets to be read
+    b       8bit access
+    h      16bit access
+           32bit access
+
+rd -c      toggle MMU check
+
+
+
+
+
+sds://>help reg
+---- OVERVIEW ----
+reg                  - reg test command
+---- DESCRIPTION ----
+reg print              : print content of registers
+                       : usage: reg print <address>
+reg add                : add register to reg address space
+                       : usage: reg add <address> <name> <size in bytes>
+reg wr                 : reg write <code1> <code2>
+reg write              : reg write <fixed> <string> <int> <bytes>
+reg wrb                : reg write binary
+reg rd                 : reg read
+
+
+
+
+
+sds://>reg print
+
+SPIReg vector size: 105
+Name                      Addr iMax iData  Contents
+------------------------------------------------------
+
+StreamAttributes            5    2    2    00 00                    ..
+AudioFormat                 6    2    2    31 00                    1.
+Channel                     7    2    2    21 00                    !.
+Frequency                   8    2    2    38 20                    8
+DM1 Mute                   16    2    2    21 00                    !.
+DM1000Status               17    2    2    21 00                    !.
+EVMDMP3 Mute               19    2    2    21 00                    !.
+VersionImage               37   20   18    49 32 30 31  32 30 38 31 I2012081
+VersionBootld              38   20   20    42 32 30 31  32 30 38 33 B2012083
+VersionCNE                 39   20   19    43 20 32 30  31 32 30 38 C 201208
+HCR Ctrl                   40    2    2    00 00                    ..
+HCR Status                 41    2    2    00 00                    ..
+DCR Ctrl                   42    2    2    00 00                    ..
+DCR Status                 43    2    2    00 00                    ..
+XModem DM1                 44 1030    2    00 00 00 00  00 00 00 00 ........
+XModem Host                45 1030    2    00 00 00 00  00 00 00 00 ........
+WebpagesVersion            46   32    2    00 00 00 00  00 00 00 00 ........
+Set Device Language        47    3    2    00 00 00                 ...
+SetCbSwitch                48    2    2    00 00                    ..
+UARTVersion                49    2    2    01 00                    ..
+NetStatus                  50    2    2    30 32                    02
+MacAddress                 51   18   18    30 30 3a 30  30 3a 30 30 00:00:00
+UserProfiles               52    2    2    30 00                    0.
+ActiveProfile              53    2    2    31 00                    1.
+Profile                    54    2    2    41 00                    A.
+DHCPClient                 55    2    2    31 00                    1.
+IP                         56   16    8    30 2e 30 2e  30 2e 30 00 0.0.0.0.
+Mask                       57   16   10    32 35 35 2e  30 2e 30 2e 255.0.0.
+DefGW                      58   16    8    30 2e 30 2e  30 2e 30 00 0.0.0.0.
+Proxy                      59    2    2    30 00                    0.
+ProxyServer                60  128    1    00 00 00 00  00 00 00 00 ........
+ProxyServerPort            61    8    2    30 00 00 00  00 00 00 00 0.......
+DNSSrv1                    62  128    8    30 2e 30 2e  30 2e 30 00 0.0.0.0.
+DNSSrv2                    63  128    8    30 2e 30 2e  30 2e 30 00 0.0.0.0.
+HostRemoteCmd              64  256    2    00 00 00 00  00 00 00 00 ........
+TelnetCmd                  65  256    2    00 00 00 00  00 00 00 00 ........
+TelnetResponse             66  256    2    00 00 00 00  00 00 00 00 ........
+Configuration              69 1024    2    00 00 00 00  00 00 00 00 ........
+DRCUpdate                  70    2    2    20 00                     .
+DRCProtocol                71  256  240    3c 76 69 65  77 20 69 64 <view id
+DRCCommand                 72    2    2    00 00                    ..
+DRCLines                   73    2    2    00 03                    ..
+DRCRefresh                 74    2    2    00 00                    ..
+CurStreamTitle             75  128    2    00 00 00 00  00 00 00 00 ........
+CurStreamUrl               76  512    2    00 00 00 00  00 00 00 00 ........
+CurStreamMimeType          77    2    2    00 00                    ..
+PlayStreamTitle            78  128    2    00 00 00 00  00 00 00 00 ........
+PlayStreamUrl              79  512    2    00 00 00 00  00 00 00 00 ........
+PlayStreamMimeType         80    2    2    00 00                    ..
+StreamFileType             81    2    2    00 00                    ..
+PlayPreset                 82    2    2    00 00                    ..
+StorePreset                83    2    2    00 00                    ..
+GetPresetName              84    2    2    00 00                    ..
+SetPresetName              85  128    2    00 00 00 00  00 00 00 00 ........
+NumberOfPresets            86    2    2    00 00                    ..
+CardeaSecurityLevel        87    2    2    00 00                    ..
+DeviceName                 88  256   18    65 44 4d 50  33 2e 39 5f eDMP3.9_
+ActiveWirelessProfile      90    2    2    31 00                    1.
+SelectedWirelessProfile    91    2    2    41 00                    A.
+WirelessSecurity           92    8    5    4e 4f 4e 45  00 00 00 00 NONE....
+IBSS                       93    8    5    54 52 55 45  00 00 00 00 TRUE....
+SSID                       94   32    5    54 52 55 45  00 00 00 00 TRUE....
+WepAuthentication          95    8    2    00 00 00 00  00 00 00 00 ........
+WepKeyIndex                96    2    2    00 00                    ..
+WepKey0                    97   28    2    00 00 00 00  00 00 00 00 ........
+WepKey1                    98   28    2    00 00 00 00  00 00 00 00 ........
+WepKey2                    99   28    2    00 00 00 00  00 00 00 00 ........
+WepKey3                   100   28    2    00 00 00 00  00 00 00 00 ........
+WpaCipher                 101    8    5    6f 70 65 6e  00 00 00 00 open....
+WpaPassphrase             102   64    5    6f 70 65 6e  00 00 00 00 open....
+BssScan                   104   32    2    00 00 00 00  00 00 00 00 ........
+BssScanResult             105  256    2    00 00 00 00  00 00 00 00 ........
+BssAttemptConnection      106    2    2    00 00                    ..
+WiFi Off/On               107    2    2    00 00                    ..
+WPSCommand                108   64    2    00 00 00 00  00 00 00 00 ........
+Set Language              114    2    2    00 00                    ..
+USB Play Direct           115    2    2    00 00                    ..
+ConvertMode               116    2    2    00 00                    ..
+TelnetShellPort           117    8    2    00 00 00 00  00 00 00 00 ........
+UARTPortsSelect           118    2    2    00 00                    ..
+TCPIPSpiPort              119    8    2    00 00 00 00  00 00 00 00 ........
+TCPIPToSpi                120  256    2    00 00 00 00  00 00 00 00 ........
+SpiToTCPIP                121  256    2    00 00 00 00  00 00 00 00 ........
+DeviceDetect              122    2    2    00 00                    ..
+DRCChildList              123    8    2    00 00 00 00  00 00 00 00 ........
+WiFiTest                  147   16    2    00 00 00 00  00 00 00 00 ........
+Set NTP Data              206    2    2    00 00                    ..
+Get NTP Time              207   32    2    00 00 00 00  00 00 00 00 ........
+Service Command/Status    208  256    2    00 00 00 00  00 00 00 00 ........
+File Transfer             209  256    2    00 00 00 00  00 00 00 00 ........
+PSM Mode                  225    2    2    00 00                    ..
+RebootDeviceStatus        226    2    2    00 00                    ..
+AirTunesPlaybackStatus    227    2    2    00 00                    ..
+VolumeHostChange          228    4    2    00 00 00 00               ....
+ACP Session               229    2    2    00 00                    ..
+ACP Access                230 2048    2    00 00 00 00  00 00 00 00 ........
+TV UpnpPicture Available  240    2    2    00 00                    ..
+TV AlbumArtSlideShow Commands  241    9    2    00 00 00 00  00 00 00 00 ........
+iOStospi                  242  256    2    00 00 00 00  00 00 00 00 ........
+spitoiOS                  243  256    2    00 00 00 00  00 00 00 00 ........
+JBRCommands               244    4    2    00 00 00 00               ....
+JBRInfo                   245  256    2    00 00 00 00  00 00 00 00 ........
+JBDSPControl              246    2    2    00 00                    ..
+RequestPowerBatteryStatus  247    2    2    00 00                    ..
+Ipodreg                   248  128    2    00 00 00 00  00 00 00 00 ........
+
+
+
+
+
+sds://>help rtp
+---- OVERVIEW ----
+rtp                  - rtp commands
+rtp clk              - Inspect or manipulate RTP time
+
+---- DESCRIPTION ----
+executes 'rtp' command
+
+
+
+
+sds://>help set
+---- OVERVIEW ----
+set                  - set <attributename> <attributevalue> - writes <attributevalue> to config <attributename>
+---- DESCRIPTION ----
+  Usage: set attributename attributevalue
+  TAB-completion supported
+  Arguments:
+    attributename: name of the attribute to change
+    attribute value: new value to be set to attributename
+  Example:
+    set dev/uart1/bufferSize 128
+
+
+
+
+
+sds://>help shell
+---- OVERVIEW ----
+shell                - shell [-b|-i|-o|-s] - shell configuration
+---- DESCRIPTION ----
+  usage: shell [-o][-i][-b][-n][-s]
+    -o  set shell to global overwrite mode
+    -i  set shell to global insert mode
+    -b  set error messages to bold
+    -n  set error messages to normal
+    -s  show shell configuration
+  keys & movements: left, rigth, up, down, home, end, insert, delete, backspace    For shell priority boost press CTRL-P
+    For shell switch to this device press CTRL-S
+
+
+
+
+
+sds://>help spilist
+---- OVERVIEW ----
+spilist              - print spi list
+---- DESCRIPTION ----
+executes 'spilist' command
+
+
+
+
+sds://>spilist
+Spi List empty
+
+
+
+
+sds://>help spilog
+---- OVERVIEW ----
+spilog               - print spi log
+---- DESCRIPTION ----
+executes 'spilog' command
+
+
+
+
+sds://>spilog
+sizeof log buffer: 500
+number of logs  : 0
+time[ms]  data1 ... data6
+spi log is empty
+
+
+
+
+
+sds://>help ssdp
+---- OVERVIEW ----
+ssdp                 - UPNP/SSDP client control [enable, disable, send, setVerbose(x)]
+---- DESCRIPTION ----
+executes 'ssdp' command
+
+
+
+
+sds://>ssdp
+Usage: send | enable | disable | setVervose(verboseLevel)
+
+
+
+sds://>help sys
+---- OVERVIEW ----
+sys                  - System commands
+sys av               - show the status of AV ports
+sys avfifo           - avfifo shell command
+sys clock            - show system power mode
+sys dma              - dma related commands
+sys if               - show interface status/statistics
+sys irq              - interrupt controller/handling
+sys llc              - show LLC and iso rx routing table
+sys lpm              - modify low power mode
+sys macb             - macb commands
+sys memdump          - dump memory
+sys memscan          - scan memory
+sys memscanraw       - scan memory
+sys pll              - fire pll events
+sys reboot           - reboots the system using PowerManager (soft reset)
+sys reset            - resets the system (hard reset)
+sys sdram            - sdram commands
+sys sds              - accesses the System Data Service
+sys sol              - Sol commands
+sys stream           - iso stream information and config
+sys swmtx            - switch matrix statistic and handling
+sys swx              - ahb switch commands
+sys sytlog           - show syt log status
+sys tgen             - timing generator commands
+sys umr              - umr priority
+sys ver              - show the version of software running
+sys versulu          - print chip version information
+sys wlan             - wlan related commands
+---- DESCRIPTION ----
+executes 'sys' command
+
+
+
+
+
+sds://>sys clock
+Xtali input                     24000000 Hz ( 24.000 MHz)
+System clock PLL                24000000 Hz x (40 / 2) / 1 = 480000000 Hz
+Clock source selection          Sys PLL
+AHB clock                       80000000 Hz ( 80.000 MHz)
+ARM clock                      240000000 Hz (240.000 MHz)
+Warp0 clock                    160000000 Hz (160.000 MHz)
+SDRAM clock                    160000000 Hz (160.000 MHz)
+AV system clock                 80000000 Hz ( 80.000 MHz)
+HV system clock                160000000 Hz (160.000 MHz)
+AV oversampling clock          160000000 Hz (160.000 MHz)
+Warp1 clock                    160000000 Hz (160.000 MHz)
+Sol clock                      160000000 Hz (160.000 MHz)
+
+PLL 0                           22579126 Hz ( 22.579 MHz)
+PLL 1                                  0 Hz (  0.000 MHz)
+PLL 2                           50000008 Hz ( 50.000 MHz)
+PLL 3                           12000003 Hz ( 12.000 MHz)
+PLL 4                                  0 Hz (  0.000 MHz)
+
+
+
+
+sds://>sys if
+---- OVERVIEW ----
+sys if               - show interface status/statistics
+---- DESCRIPTION ----
+  <interface> stat      [uart0|uart1|spi0]
+
+
+
+
+
+sds://>help sys macb
+---- OVERVIEW ----
+sys macb             - macb commands
+sys macb callback    - macb ethernet callbacks
+sys macb debug       - set debug levels
+sys macb irq         - macb ethernet interrupts
+sys macb phy         - phy register commands
+sys macb reg         - show MAC registers
+---- DESCRIPTION ----
+executes 'macb' command
+
+
+
+
+sds://>help sys memdump
+---- OVERVIEW ----
+sys memdump          - dump memory
+---- DESCRIPTION ----
+  <startAddr> <size>    start address
+                        size in bytes
+  <startAddr> <size> <ascii>
+                        use ascii output
+
+
+
+
+sds://>sys memdump 0x40000000 0x100
+start address: 0x40000000
+end   address: 0x40000100
+0x40000000: E6FFFFFF 70182565 4D4460DA B821D928
+0x40000010: 130A4A1C 704BF1EF F2F7D04E 4ABB477F
+0x40000020: B8AD432F 2953FEBB 348AB3A3 5394D4CA
+0x40000030: 2B455439 6A63BDC3 85E2B95F 023C0DE2
+0x40000040: 21FF3ADA 442BA410 32A7B572 01D9044D
+0x40000050: 5A217CA7 723EB01D ED67DCA4 27BE280F
+0x40000060: EFDDF7C5 B228F83B 269CB48A 603FEDF3
+0x40000070: 9168B778 B403BBDC C022E6A8 613B70A8
+0x40000080: C9617C56 EDF3C49C 7A4CCFC7 5BED9188
+0x40000090: 35D863F1 22A64479 2439D654 19B337B6
+0x400000a0: A0B3A250 D3FE85EF DDAEE293 7EDF595B
+0x400000b0: 42BFEEED B885B1F2 DDC50987 B7B66B96
+0x400000c0: 30223C4C BD08CCB6 AFB83A0C 1D833D26
+0x400000d0: 4F09D624 31159AD2 EB80AC49 50A9829C
+0x400000e0: E9C5861A 57F7E38D CDB101BF 75B72424
+0x400000f0: F645D9A7 373FAB0C 34B1A481 F226C0E9
+
+
+
+
+
+
+
+
+
+
+sds://>sys sol
+---- OVERVIEW ----
+sys sol              - Sol commands
+sys sol testInstr    - test Sol execution unit instructions
+---- DESCRIPTION ----
+executes 'sol' command
+
+
+
+
+sds://>sys swx
+---- OVERVIEW ----
+sys swx              - ahb switch commands
+sys swx ahberr       - ahb bus error
+sys swx berr         - generate bus error
+sys swx msu          - msu interrupt
+sys swx reg          - show swx registers
+---- DESCRIPTION ----
+executes 'swx' command
+
+
+
+
+sds://>sys sytlog
+SYT LOG not enabled
+
+
+
+
+sds://>sys ver
+Library Name                Version                    CVS Tag Name
+-------------------------------------------------------------------------------
+KnOS (Release)              9196 (2012-08-14  23:01:18)JB3_0F_edmp_16MB_NOR-3_8_0-9196_ER
+APP:JB21.0-Ref/HW:JukeBlox2 (Release)9196 (2012-08-14  23:01:18)JB3_0F_edmp_16MB_NOR-3_8_0-9196_ER
+AudioHWService (Release)    9196 (2012-08-14  23:01:18)hal_service-3_3_0-9196_ER
+DM870_HAL (Release)         9196 (2012-08-14  23:01:18)PSM_SDRAM-1_0_0-9196_ER
+
+   Component CreationDate CreationTime       ID  Version  FlashID   BaseAddr     Length
+                 YYYYMMDD       HHMMSS
+---------------------------------------------------------------------------------------
+      DMChip          N/A          N/A        8        0        0 0x00000000 0x00000000
+    Hardware          N/A          N/A      189        0        0 0x00000000 0x00000000
+  Bootloader     20120830       083758        0        0        0 0x40050080 0x00000028
+         Cne     20120817       115206      114     9196        0 0x40020080 0x00000028
+       Image     20120817       115206      114     9196        0 0x401C0080 0x00000028
+
+
+
+
+sds://>sys versulu
+arm                    926/rev 5
+uart1           2006-11-08/rev 1
+av ptu          2006-11-17/rev 1
+av common       2006-11-17/rev 1
+av0             2006-11-17/rev 1
+av2             2006-11-17/rev 1
+av3             2006-11-17/rev 1
+av4             2006-11-17/rev 1
+uart0           2006-11-08/rev 1
+spi0            2006-11-08/rev 1
+nfh             2006-11-08/rev 1
+dma             2006-11-08/rev 1
+
+
+
+
+sds://>sys wlan
+---- OVERVIEW ----
+sys wlan             - wlan related commands
+sys wlan ctrl        - Low level control wireless commands
+sys wlan mib         - Management Information Base related commands
+sys wlan pci         - Test PCI interface
+sys wlan test        - Test commands for Wifi test mode.
+---- DESCRIPTION ----
+executes 'wlan' command
+
+
+
+
+sds://>help test
+---- OVERVIEW ----
+test                 - Test commands
+test BCOApple        - Apple related commands
+test JBRemoteUnitShell - JBRemoteUnitShell commands
+test TestBrowser     - TestBrowser commands
+test rdmtraverse     - traverse rdmfs
+---- DESCRIPTION ----
+executes 'test' command
+
+
+
+
+
+sds://>help upnp
+---- OVERVIEW ----
+upnp                 - UPNP control point [help]
+---- DESCRIPTION ----
+executes 'upnp' command
+
+
+
+sds://>help usb
+---- OVERVIEW ----
+usb                  - commands related to USB
+usb drv              - Commands related to USB Bus Driver level
+usb host             - USB cmd for host controller
+usb ipod             - Shell cmd for iPod Device
+usb msd              - Shell cmd for MassStorage Device
+usb mtp              - Shell cmd for MTP device
+usb stack            - Shell cmd for USB Stack
+usb test             - USB test commands
+---- DESCRIPTION ----
+executes 'usb' command
+
+
+
+
+sds://>usb drv
+---- OVERVIEW ----
+usb drv              - Commands related to USB Bus Driver level
+---- DESCRIPTION ----
+drv stat [reset]
+    reg
+    ep [ep-no]    fifo
+
+
+
+
+sds://>usb host
+---- OVERVIEW ----
+usb host             - USB cmd for host controller
+---- DESCRIPTION ----
+usb host list
+usb host log <on|off> [dev#] [ep#] [rx|tx]
+usb host devlog <on|off>
+
+
+
+
+sds://>usb ipod
+---- OVERVIEW ----
+usb ipod             - Shell cmd for iPod Device
+---- DESCRIPTION ----
+usb ipod testmode [on|off]
+usb ipod setinterface [idx] [altsetting]
+usb ipod setsamplerate [Fs]
+
+
+
+
+sds://>usb msd
+No MassStorageDevice available!
+---- OVERVIEW ----
+usb msd              - Shell cmd for MassStorage Device
+---- DESCRIPTION ----
+usb msd format <DevAddr>
+usb msd open <DevAddr>
+
+
+
+
+sds://>usb mtp
+getdeviceinfo : Get device information
+opensession  <sessionId> : Open MTP session
+closesession : Close MTP session
+getstorageids : Get storage IDs
+getstorageinfo <storageId> : Get storage info
+getnumobjects <storageId> <formatCode> <parentHandle> : Get number of objects for given storage ID, format code and parent
+getobjecthandles <storageId> <formatCode> <parentHandle> : Query object handles for given storage ID, format code and parent
+getobjectinfo <objectHandle> : query object information
+resetdevice : Reset the device
+openmediasession <objectHandle> <forceNewSession> : open media session
+closemediasession <mediaSessionId> : close media session
+getnextdatablock <mediaSessionId> <maxBlockSize> : get next data block
+setcurrenttimepos <mediaSessionId> <timeoffestinms> : set current time position in file
+getobjectpropssupported <formatCode> : Query object properties supported
+---- OVERVIEW ----
+usb mtp              - Shell cmd for MTP device
+---- DESCRIPTION ----
+usb mtp <command> [arg] ...
+
+
+
+
+sds://>usb stack
+---- OVERVIEW ----
+usb stack            - Shell cmd for USB Stack
+---- DESCRIPTION ----
+usb stack ep
+
+
+
+
+sds://>usb test
+---- OVERVIEW ----
+usb test             - USB test commands
+usb test copy        - Shell cmd for USB copy tests
+usb test crc         - Shell cmd for USB CRC tests
+usb test speed       - Shell cmd for USB speed tests
+---- DESCRIPTION ----
+test reset
+     suspend
+     resume
+     enableHS [on|off]
+     enablePingWorkaround [on|off]
+     enableSoftConn [on|off]
+     session [on|off]
+     hostDisc
+     setFeatStep [1|2]
+     devDescStep [1|2|3]
+     testpat [j|k|se0|pkt|forceHostHS|forceHostFS|forceHostLS]
+
+
+
+
+
+sds://>help usbd
+---- OVERVIEW ----
+usbd                 -  usbd
+---- DESCRIPTION ----
+executes 'usbd' command
+
+
+
+
+
+sds://>help waaed
+---- OVERVIEW ----
+waaed                - waaed help...
+---- DESCRIPTION ----
+executes 'waaed' command
+
+
+
+
+sds://>waaed
+sds://>
+
+
+
+
+sds://>help wpa
+---- OVERVIEW ----
+wpa                  - wpa_supplicant cli
+---- DESCRIPTION ----
+commands:
+  status [verbose] = get current WPA/EAPOL/EAP status
+  help = show this usage help
+  level <debug level> = change debug level
+  logoff = IEEE 802.1X EAPOL state machine logoff
+  logon = IEEE 802.1X EAPOL state machine logon
+  set = set variables (shows list of variables when run without arguments)
+  pmksa = show PMKSA cache
+  reassociate = force reassociation
+  reconfigure = force wpa_supplicant to re-read its configuration file
+  preauthenticate <BSSID> = force preauthentication
+  list_networks = list configured networks
+  add_network = add a network
+  remove_network <network id> = remove a network
+  set_network <network id> <variable> <value> = set network variables (shows
+    list of variables when run without arguments)
+  get_network <network id> <variable> = get network variables
+  disconnect = disconnect and wait for reassociate/reconnect command before
+     connecting
+  reconnect = like reassociate, but only takes effect if already disconnected
+  scan = request new BSS scan
+  scan_results = get latest scan results
+  wps_pbc = start WPS push-button method
+  wps_pin <bssid> <pin> = start WPS pin method against given AP
+  wps_pin SSID <ssid_as_hex|"<ssid_as_text"> <pin> = start WPS pin method against given AP
+  wps_cancel = cancel pending WPS method
+  wps_scan_results = show WPS-enabled APs found in previous scan
+miscellaneous:
+  service = test WlControlService service
+  debug_level [level] = get/set debug level
+  sta_mode [0/1] = disable / enable sta mode
+  auth_type [value] = set auth type in M1
+  enc_type [value] = set enc type in M1
+  config_methods [value] = set config methods in M1
+
+
+
+
+
+sds://>wpa scan
+OK
+
+
+
+
+
+sds://>wpa scan_results
+
+
+
+
+
+sds://>help wr
+---- OVERVIEW ----
+wr                   - wr <addr> <value> [b|h] - writes <value> to <addr> (b=8bit, h=16bit)
+---- DESCRIPTION ----
+  usage: wr <addr> <value> [q] [b|h]
+    addr   start address
+    value  to be set @ addr
+    b       8bit access
+    h      16bit access
+           32bit access
+
+wr -q      toggle verbose mode
+wr -c      toggle MMU check
+
+sds://>
