@@ -1,0 +1,214 @@
+Start bootloader.
+SYSTEM_RESTART_BOOTLOADER: Restarting System and Stopping at Bootloader...
+
+Reset Board...
+
+FLB running @ 24000000Hz; Flash Drivers:  MX29GL640E detected.
+Starting Bootloader Level 1
+Forced start of Bootloader Level 2
+Starting Bootloader Level 2
+
+
+Copyright 2000-2005 by BridgeCo AG, Duebendorf, Switzerland
+
+           Type  Start       End         Size
+    Heap cached  0x6046e124  0x60f08000  0x00a99edc/11116252
+Heap non-cached  0x70f08000  0x71000000  0x000f8000/1015808
+    UMR0 cached  0x004029d0  0x0040fa00  0x0000d030/53296
+UMR0 non-cached  0x00500000  0x0050fa00  0x0000fa00/64000
+
+Stacks     Start       End        Size
+timer      0x004025d0  0x004029d0 0x400/1024
+supervisor 0x00402050  0x00402450 0x400/1024
+user       0x00402450  0x004025d0 0x180/384
+irq        0x00401ef0  0x00402050 0x160/352
+fiq        0x60461f0c  0x60461f2c 0x20/32
+undef      0x60461e8c  0x60461f0c 0x80/128
+
+module: bootloaderHalInit... [ok]
+module: SuluGPIO... [ok]
+module: SuluUART0... [ok]
+module: SuluUART1... [ok]
+module: FlashDrivers...  MX29GL640E detected.[ok]
+module: bootloaderBaseInit... Found a 64kbyte blocked flash
+Persistent Parameter at 0x10000, size: 0x10000
+Found a 64kbyte blocked flash
+CneA set to 0x20080
+CneU set to 0x30000
+CneS set to 0x10000
+[ok]
+module: cneModule...  CnE from Flash[ok]
+module: bootloaderCopyPersParamsToCne... [ok]
+module: systemDataService... [ok]
+module: cneSystemDataMgr... [ok]
+module: AudioHWService... [ok]
+module: HALCompatibilityService... [ok]
+module: SuluModule... [ok]
+module: EVMCE2_HAL... getServiceInterface 'SystemDataService': 1 interfaces are registered
+**************Configuring GPIO for Infra Red*************** n
+Instantiating HAL getSVC01 ChangeerviceInterface 'AudioHWService': 3 interfaces are registered
+.getServiceInterface 'AudioHWService': 3 interfaces are registered
+
+ could not open cne for writing
+...getServiceInterfa[ok]
+module: ResourceManagerService... [ok]
+module: NetworkingSystemDataModule... [ok]
+module: NetworkDriverSystemDataModule... [ok]
+module: networking... ce 'AudioHWService': 3 interfaces are registered
+.Video driver could not be initialized
+ failed
+**************Configuring GPIO for Infra Red*************** ngetServiceInterface 'AudioHWService': 3 interfaces are registered
+getServiceInterface 'AudioHWService': 3 interfaces are registered
+getServiceInterface 'AudioHWService': 3 interfaces are registered
+getServiceInterface 'AudioHWService': 3 interfaces are registered
+getServiceInterface 'HALCompatibilityService': 3 interfaces are registered
+getServiceInterface 'AudioHWService': 3 interfaces are registered
+getServiceInterface 'AudioHWService': 3 interfaces are registered
+getServiceInterface 'HALCompatibilityService': 3 interfaces are registered
+getServiceInterface 'AudioHWService': 3 interfaces are registered
+getServiceInterface 'UserResourceRetrieverService': 4 interfaces are registered
+getServiceInterface 'UserResourceRetrieverService': 4 interfaces are registered
+ResourceManager:: getResourceLocation() couild not load resource retriever service
+loadFFSResourcePages() FAILED
+prep_ifaces() for iface 0: MAC-Address is: 08:00:09:12:34:56
+MACB Ethernet MAC interface
+prep_ifaces() for iface 1: MAC-Address is: 08:00:09:12:34:56
+preped 3 interfaces, initializing...
+wired IF:    MacbCfg   Interface 0
+wireless IF:    WlanCfg   Interface 1
+initialized sysDataProxy on path sds://static/Networking/DrvStatus/WlanCfg/Mac
+Attaching device at address 0xe0017000
+Resetting mac to default state
+Probing PHY
+No PHY detected
+Starting macb_rx
+Starting macb_tx
+Failed when reconfiguring the PHY device
+Failed calling macb_open
+init error -1 on net[0]
+MacAddressCopier::updateObserver
+copying MAC address to persistent parameters
+set PersParam MAC 08:00:09:12:34:56
+Clearing o[ok]
+module: Iperf... [ok]
+module: WpaSupplicantSulu... [ok]
+module: FlashUpdateService... [ok]
+module: SuluUSBBusDriver... [ok]
+module: RDMFileSystemService... [ok]
+module: USBStack... [ok]
+module: USBHostController... [ok]
+module: webserverModule... [ok]
+module: modPersParamCommand... [ok]
+module: flashBurn... [ok]
+module: SetStaMode... [failed]
+ERROR: module returned error code 1615315792
+module: networkConnectionHandler... [ok]
+module: webCfgBaseModule... ut hash address register
+Adding multicast address 01:00:5E:00:00:01 to macb filter
+Activating bit 38 in hash register
+Setting up the hash register now
+Enabled JBConnect is 0 change net state to EIPCFG_DHCP_IN_PROG[ok]
+module: webCfgBSLModule... [ok]
+module: bootloaderApp... [ok]
+module: USBAdaptionLayer... [ok]
+module: RDMFSFileReaderService... [ok]
+module: RDMFileSystemTest... [ok]
+module: FATFileSystem... [ok]
+module: NetInterfaceChangeNotifierService... [ok]
+module: FileTransferService... [ok]
+module: RemoteRegCtrldÆgetServiceInterface 'AVRPlayerService': 15 interfaces are registe[ok]
+module: MemoryBlobFirmwareUpdateService... [ok]
+module: FwUpdateInternetOverRR... red
+Bootloader::onOsSystemInitDone() Could NOT retreive the AVRPlayer service
+getServiceInterface 'USBStackService': 15 interfaces are registered
+getSer[ok]
+System initialisation done.
+viceInterface 'USBBusDriverService': 15 interfaces are registered
+getServiceInterface 'RDMFileSystemService': 15 interfaces are registered
+getServiceInterface 'FlashUpdateService': 15 interfaces are registered
+FwUpdateInternetHandler::FwUpdateInternetHandler
+Update from USB
+getServiceInterface 'RDMFileSystemService': 15 interfaces are registered
+getServiceInterface 'AVRPlayerService': 15 interfaces are registered
+Could not retrieve AVRPlayerService
+FwUpdateHandler::addObserver() start
+NapManager::addObserver() done
+getServiceInterface 'ZappaService': 15 interfaces are registered
+Returning from wlan_wifi_reset_done because either Value: 0 pWlanDevice: 6047f180
+WLAN msg = Module set to 0
+Bootloader Second Level: CRC ok! Id=00000000, V=00000000, 20120830-083758  UT
+getServiceInterface 'USBBusDriverService': 15 interfaces are registered
+getServiceInterface 'USBBusDriverService': 15 interfaces are registered
+getServiceInterface 'USBBusDriverService': 15 interfaces are registered
+USB device VID=0x0951 PID=0x1607 (devClass = 00, ifClass = 08, address = 1) found.
+USBAdaptionLayer::addIntoNotMTPDevicesList() Got 09511624;09511607;
+isListedAsNotMTPDevice
+getServiceInterface 'USBBusDriverService': 15 interfaces are registered
+getServiceInterface 'USBBusDriverService': 15 interfaces are registered
+getServiceInterface 'USBBusDriverService': 15 interfaces are registered
+getServiceInterface 'USBBusDriverService': 15 interfaces are registered
+getServiceInterface 'USBBusDriverService': 15 interfaces are registered
+getServiceInterface 'USBBusDriverService': 15 interfaces are registered
+Mass Storage Device (Addr=1) added
+RDMFS> addDevice
+RDM Device INFO ===================
+    Handle:         00000001
+    Num Of Volumes: 00000001
+    Volume 0:
+        VolumeHandle:    00000001:
+        FileSystem Type: 1:
+FwUpdateInternetHandler::deviceAdded
+FwUpdateInternetHandler::DoDownload from USB
+URL=file://USB/0/FILE1.fw
+OPen Data function called by thread <FwUpdateInternetHandler>
+getServiceInterface 'FlashUpdateService': 15 interfaces are registered
+FwUpdater::OpenData::initialize HEAP available: 0x87bcf0(8895728 dez) and asking for UPDATE_MIN_HEAP_REQ_MCU=6803456.
+ initialize m_cBuffer at 0x6068c308, 6803456 bytes big.
+getServiceInterface 'MemoryBlobService': 15 interfaces are registered
+ Can't retrieve MemoryBlobService.
+Couldnot Open Buffer for Download
+m_cpAVRPlayerService not initialized
+Deleting Buffer
+Application: CRC ok! Id=00000072, V=000023EC, 20120817-115206  UT
+enter wpa_driver_sulu_init(604debb4, wifi)
+CNE Factory: CRC ok! Id=00000072, V=000023EC, 20120817-115206  UT
+getServiceInterface 'AVRPlayerService': 15 interfaces are registered
+
+Bootloader Level 2 Menu  (Aug 30 2012, 14:03:17)
+================================================
+ 1) Download Image and Config (CnE)
+ 2) Download Image Only
+ 3) Download resource pages
+ 4) Start Image
+ 5) Print Image Info
+ 6) Mark Image as invalid
+ 7) Config (CnE) to factory default
+ 8) Program MAC address 0
+ 9) Program GUID
+ a) Single Image Write
+ b) Start BIST
+ c) Program TVID
+ d) Set Start Mode
+ e) Exit to Shell
+ f) Download Image, Config and Resources (TFTP)
+ g) Download Image Only (TFTP)
+ h) Download Bootloader (TFTP)
+ i) Download Resources (TFTP)
+ j) Download Image and Resources (TFTP)
+
+Registering Reset CB
+Setting module to 1
+WLAN msg = Module set to 1
+Setting antenna to 22
+
+Firmware registers setting done
+getServiceInterface 'WlControlService_Sulu': 15 interfaces are registered
+MM_BuildWpsFrameFromMib : Address of MM_preparedWpsIe  = 6046c624
+MM_RxMgtFrameSta : Address of MM_preparedWpsIe  = 6046c624
+Network driver #1 status: connected.
+Enabled JBConnect is 0 change net state to EIPCFG_DHCP_IN_PROGRESS
+IpStatusUpdater::doIp1StatusChanged [1] 1 0
+
+DHCP client: got address 192.168.1.167 mask 255.255.255.0
+change net state to EIPCFG_DHCP_FINISHED, IP address: 192.168.1.167
+IpStatusUpdater::doIp1StatusChanged [1] 4 1

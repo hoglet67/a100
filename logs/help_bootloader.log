@@ -1,0 +1,131 @@
+sds://>help
+
+### Available Commands ###
+help                 - displays all available commands
+bldr                 - start bootloader menu
+btb                  - btb test commands
+cd                   - cd <dir> - changes current directory to <dir>
+clear                - clear shell history
+dbgprt               - debug print commands
+fburn                - flash burn commands
+filetransfer         - File Transfer
+get                  - get [-e] <attributename> - reads value and type of <attributename>
+iperf                - The TCP/UDP Bandwidth Measurement Tool
+ls                   - ls [-r|-n|-e|-v] - shows content of (current) directory
+memfwupdate          - Memory Blob Firmware Update
+net                  - networking (TCP/IP)
+netcfg               - print network settings
+netgen               - network generation (dynamic configuration)
+os                   - KnOS commands
+persparam            - persparam rd <name>             : read integer (name = 4 characters)
+          rds <name>            : read string (name = 4 characters)
+          rdss <name>           : read string (name = string)
+          wr <name> <value>     : write integer (name = 4 characters)
+          wrs <name> <value>    : write string (name = 4 characters)
+          wrss <name> <value>   : write string (name = string)
+          wrb <name> <hex-str>  : write binary string (name = 4 characters, hex-string eg. 0xafc9f0)
+          wrbs <name> <hex-str> : write binary string (name = string, hex-string eg. 0xafc9f0)
+          clr <name>            : clear integer (name = 4 characters)
+          clrs <name>           : clear string (name = 4 characters)
+          check                 : check and update default parameters
+          reset                 : reset parameters to default
+
+ping                 - ping <ip-address>
+probe                - probe <ip-address>
+pwd                  - pwd - shows the complete currently used path
+rd                   - rd <addr> <count> [b|h] - reads <count> values starting at <addr> (b=8bit, h=16bit)
+rdm                  - Execute RDM FileSystem test command
+set                  - set <attributename> <attributevalue> - writes <attributevalue> to config <attributename>
+shell                - shell [-b|-i|-o|-s] - shell configuration
+sys                  - System commands
+test                 - Test commands
+usb                  - commands related to USB
+wpa                  - wpa_supplicant cli
+wr                   - wr <addr> <value> [b|h] - writes <value> to <addr> (b=8bit, h=16bit)
+
+
+sds://>help bldr
+---- OVERVIEW ----
+bldr                 - start bootloader menu
+---- DESCRIPTION ----
+executes 'bldr' command
+
+
+sds://>bldr
+Bootloader::onOsSystemInitDone() Could NOT retreive the AVRPlayer service
+Bootloader Second Level: CRC ok! Id=00000000, V=00000000, 20120830-083758  UT
+Application: CRC ok! Id=00000072, V=000023EC, 20120817-115206  UT
+CNE Factory: CRC ok! Id=00000072, V=000023EC, 20120817-115206  UT
+
+Bootloader Level 2 Menu  (Aug 30 2012, 14:03:17)
+================================================
+ 1) Download Image and Config (CnE)
+ 2) Download Image Only
+ 3) Download resource pages
+ 4) Start Image
+ 5) Print Image Info
+ 6) Mark Image as invalid
+ 7) Config (CnE) to factory default
+ 8) Program MAC address 0
+ 9) Program GUID
+ a) Single Image Write
+ b) Start BIST
+ c) Program TVID
+ d) Set Start Mode
+ e) Exit to Shell
+ f) Download Image, Config and Resources (TFTP)
+ g) Download Image Only (TFTP)
+ h) Download Bootloader (TFTP)
+ i) Download Resources (TFTP)
+ j) Download Image and Resources (TFTP)
+
+sds://>help memfwupdate
+
+---- OVERVIEW ----
+memfwupdate          - Memory Blob Firmware Update
+---- DESCRIPTION ----
+executes 'memfwupdate' command
+
+
+sds://>memfwupdate
+USAGE:
+ > memfwupdate mem://filename <ImageCne | Image | Cne | Bootloader>
+
+sds://>help rdm
+
+---- OVERVIEW ----
+rdm                  - Execute RDM FileSystem test command
+---- DESCRIPTION ----
+executes 'rdm' command
+
+sds://>rdm
+Wrong command.
+    verbose:    [level]
+    fatverbose: [level]
+    info:       []
+    fs:         [volumeId]
+    path:       []
+    cd:         [path|name]
+    md:         [path|name]
+    rd:         [path|name]
+    dir:        []
+    fdel:    	[path|name]
+    fopen:      [name][option:r,r+,w]
+    fclose:     [hFile]       - hFile - optional
+    fread:      [size][hFile] - hFile - optional
+    fwrite:     [size][hFile] - hFile - optional
+    fseek:      [pos][hFile]  - hFile - optional
+    ftell:      [hFile]       - hFile - optional
+    fname:      [hFile]       - hFile - optional
+    fpath:      [hFile]       - hFile - optional
+    ffname:     [hFile]       - hFile - optional
+    fsize:      [hFile]       - hFile - optional
+    dump:       [hFile]       - hFile - optional
+    copy:       [srcName][dstName]
+    gfd:        [] - getFirstDir
+    gnd:        [] - getNextDir
+    gff:        [] - getFirstFile
+    gnf:        [] - getNextFile
+    gfi:        [] - getFirst File or Directory
+    gni:        [] - getNext File or Directory
+    testspeed:  [] - read //test.dat and meassure kbps
