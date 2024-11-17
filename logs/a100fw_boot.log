@@ -1,0 +1,377 @@
+
+FLB running @ 24000000Hz; Flash Drivers:  MX29GL640E detected.
+Starting Bootloader Level 1
+Starting Application
+DEVICE ID IS DM8XX : 0x70
+
+
+Copyright 2000-2005 by BridgeCo AG, Duebendorf, Switzerland
+
+           Type  Start       End         Size
+    Heap cached  0x605a06a0  0x60fbe000  0x00a1d960/10606944
+Heap non-cached  0x70fce000  0x71000000  0x00032000/204800
+    UMR0 cached  0x00404090  0x0040fa00  0x0000b970/47472
+UMR0 non-cached  0x00500000  0x0050fa00  0x0000fa00/64000
+
+Stacks     Start       End        Size
+timer      0x00403c90  0x00404090 0x400/1024
+supervisor 0x00403710  0x00403b10 0x400/1024
+user       0x00403b10  0x00403c90 0x180/384
+irq        0x004035b0  0x00403710 0x160/352
+fiq        0x6055e314  0x6055e334 0x20/32
+undef      0x6055e294  0x6055e314 0x80/128
+
+module: SuluGPIO... [ok]
+module: SuluUART0... [ok]
+module: SuluUART1... [ok]
+module: SuluSPI0... [ok]
+module: SuluNFH... [ok]
+module: SysDevSCIEmu... [ok]
+module: FlashDrivers...  MX29GL640E detected.[ok]
+module: cneModule...  CnE from FlashFound a 64kbyte blocked flash
+Persistent Parameter at 0x10000, size: 0x10000
+[ok]
+module: cnePersistentModule... [ok]
+module: cneRestoreModule... [ok]
+module: systemDataService... [ok]
+module: cneSystemDataMgr... [ok]
+module: AudioHWService... [ok]
+module: NandDistrubService...
+****** BTI_CNERESTORE_OTIMIZA[ok]
+module: HALCompatibilityService... [ok]
+module: IpodDetectServiceModule... [ok]
+module: EVMCE2_HAL... TION
+****** BTI_CNERESTORE_OTIMIZATION
+********* PERS_FWUP value=0
+Instantiating HAL ....... ok
+**************Configuring GPIO for Infra Red*************** n[ok]
+module: SuluModule... [ok]
+module: IPodAuthCoprocessorV2Service... **************Configuring GPIO for Infra Red*************** nm_ACPOnHost is 0
+IPodAuthCoprocessorV2Impl: ACP NOT on Host
+[ok]
+module: RTPTimeServiceModule... [ok]
+module: UserResourceRetrieverService... [ok]
+module: ResourceManagerService... *pData=0x4077161c, iSize = 0x3de8
+*pData=0x40700080, iSize = 0xd528
+ResourceManagerImpl.cpp[ok]
+module: NetworkingSystemDataModule... [ok]
+module: NetworkDriverSystemDataModule... [ok]
+module: networking... (1058)
+ERROR: ResourceManager::loadResourcePages(): No Resource Page FFS (label=0x00000000)!!!
+prep_ifaces() for iface 0: MAC-Address is: 08:00:09:12:34:56
+MACB Ethernet MAC interface
+Attaching device at address 0xe0017000
+Resetting mac to default state
+Probing PHY
+No PHY detected
+macb_is_cable_plugged(): failure in macb_probe_PHY()
+prep_ifaces() for iface 0: MAC-Address is: 08:00:09:12:34:56
+preped 2 interfaces, initializing...
+wireless IF:    WlanCfg   Interface 0
+initialized sysDataProxy on path sds://static/Networking/DrvStatus/WlanCfg/Mac
+MacAddressCopier::updateObserver
+copying MAC address to persistent parameters
+set PersParam MAC 08:00:09:12:34:56
+
+dhc_setup:: Enabled val = 0
+chan[ok]
+module: Iperf... [ok]
+module: WpaSupplicantSulu... [ok]
+module: StreamDeviceManager... [ok]
+module: StreamDeviceObserver... [ok]
+module: IsoStreaming... [ok]
+module: SuluStreamDeviceAV... [ok]
+module: SuluStreamDeviceARM... [ok]
+module: StreamDeviceUSB... [ok]
+module: AE_AppInterService... [ok]
+module: SuluUSBBusDriver... [ok]
+module: RDMFileSystemService... [ok]
+module: USBStack... [ok]
+module: USBHostController... [ok]
+module: UPnPModuleService... [ok]
+module: RadeaStreamProcess... [ok]
+module: FlacStreamProcess... [ok]
+module: MP3StreamProcess... [ok]
+module: WaveStreamProcess... [ok]
+module: WmaStreamProcess... [ok]
+module: VorbisStreamProcess... [ok]
+module: ShoutcastStreamProcess... [ok]
+module: WMSClientProcess... [ok]
+module: AACStreamProcess... [ok]
+module: LpcmStreamProcess... [ok]
+module: AvInDecStreamProcess... [ok]
+module: IPodUSBInStreamProcess... [ok]
+module: RDMFSStreamProcess... [ok]
+module: DeFramerStreamProcess... [ok]
+module: BCOAirTunesNapReceiver... [ok]
+module: BCOAirtunesStreamProcess... [ok]
+module: CommunicationSettingsService... [ok]
+module: guardDevice... [ok]
+module: NapIsoStreamOutputAv... [ok]
+module: TelnetShellService... [ok] [ok]
+module: RemoteAddressSpaceModule... [ok]
+module: flashBurn... [ok]
+module: modPersParamCommand... [ok]
+module: PSMService... PSM Object created
+[ok]
+module: IPodAuthShell... [ok]
+module: DeviceNameController... PSMService creation
+[ok]
+module: JBConnect... [ok]
+module: USBAdaptionLayer... [ok]
+module: MemoryBlobService... [ok]
+module: GenaService... [ok]
+module: SsdpClient... [ok]
+module: UpnpControl... [ok]
+module: ConvModeChangerService...
+ the module JBConnectInit is initialized
+
+enabled val = 0
+JBConnectInit  got WlConnectionService service
+
+ JBConnectInit is initialized successfully************
+[ok]
+module: NapModuleNoIsoStreamOutput... Reading Overlineout Intf
+sdsShell ready for commands. Try "help" for help.
+sds://>Setup AV dividers 44100
+
+ volume attribute value is 1
+[ok]
+module: RDMFSFileReaderService... [ok]
+module: RDMFSContentBrowser... [ok]
+module: RemoteCommandBufferService... [ok]
+module: SPIRegisterTransportLayer... [ok]
+module: DSPUARTRegisterTransportLayer... [failed]
+ERROR: module returned error code 1
+module: FileTransferService... [ok]
+module: SearchFwUrlHandler... [ok]
+module: AVRPlayerService... DecoderDataHandler(DecoderBaseDataHandler.cpp[82]):TRACE WARNING:NapDecoderProcessor: Could NOT retrieve FlacStreamEncoder
+
+**BTI enabled val = 0
+AVRPlayerServiceImpl::AVRPlayerServiceImpl() Could NOT retreive the DRC_Command service
+
+
+Got Cne version '20141205' Length 40 strVer 'C 201412050808'
+
+
+Got Cne version '20141205' Length 40 strVer 'C 2014120508089329'
+Registered Download Status[ok]
+module: RemoteRegCtrldFileTransferService... [ok]
+module: BCOAirTunesService... [ok]
+module: AlbumArtOverRR... [ok]
+module: WaveRadio2AppControl... [ok]
+module: LocalUi2...
+**  AirTunesSetTimelineOffset  extracted  0
+**  AirTunesSetTimelineOffset  set sucessfull   0AlbumArtOverRR(), Error: Couldn't readed CnE
+****** AlbumArtOverRR Xmodem File Transfer Service disabled ********
+
+------------------------------------------------------------
+Initializing Wr2_AppControl
+------------------------------------------------------------
+LibraryVersion:      APP:JB21.0-Ref/HW:JukeBlox2 (Release)
+LibraryBuildVersion: 9329 (2012-11-30  01:27:07)
+LibraryCVSTag:       JB3_1F_edmp_16MB_NOR-3_8_0-9329_ER
+------------------------------------------------------------
+
+UIModeManager::UIModeManager() Error: Could NOT retreive the RhapsodyDirectExtCBService!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+Player/iPodPlayer(iPodPlayer.cpp[56]):TRACE ERROR:Could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIHomeModeHandler::UIHomeModeHandler() Successfuly added the handler
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+MenuPlayContextHandler::MenuPlayContextHandler() Error: Could NOT retreive the RhapsodyDirectExtCBService!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDefaultModeHandler()                      could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[120]):TRACE WARNING:UIDefaultModeHandler: UIDe[ok]
+module: SPIRemoteControl... faultModeHandler()             [ok]
+module: TCPIPTunnelingModule... [ok]
+module: UPnPDevice...          could not retreive IPodControlService
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[135]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                      Could NOT get PandoraService service interface
+UIMgr/DefaultModeHandler(UIDefaultModeHandler.cpp[154]):FATAL TRACE ERROR:UIDefaultModeHandler: UIDefaultModeHandler()                     Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/UIRemoteControlOnlyModeHandler(UIRemoteControlOnlyModeHandler.cpp[83]):TRACE ERROR:UIRemoteControlOnlyModeHandler::UIRemoteControlOnlyModeHandler() Could NOT get iPod serial service interface
+UINapEvtHandler: Could NOT get PicturePlayer service interface
+UpnpAvDidlReader: cannot get DrmServiceManager
+cannot get DrmServiceManager
+UpnpAvDidlReader: cannot get DrmServiceManager
+cannot get DrmServiceManager
+UpnpAvDidlReader: cannot get DrmServiceManager
+cannot get DrmServiceManager[ok]
+module: SpiNtpModule... [ok]
+module: SpiAppCtrlModule... [ok]
+module: USBPlayDirectModule... [ok]
+module: FSChangeTimeOutModule... [ok]
+module: StreamStatusModule... [ok]
+module: HostCommandRemoteRegModule... [ok]
+module: SSLService...
+UpnpAvDidlReader: cannot get DrmServiceManager
+cannot get DrmServiceManager
+upnpCpService.cpp(294) Could NOT retrieve the Cardea Service !!!!
+================ WaaRemoteCtrl::initialize() ===============
+================ WaaRemoteCtrl::initialize() END ===============
+*** HostPresent Mute = 0
+
+
+	 !!! WHA DEVICE START INIT !!!
+
+
+*****NEW_DEVICE_NAME: Airstream A100  123456
+UIModeManager::networkConnectionCB 0 	 0
+[SSP] SSL_init done ...!
+[ok]
+module: IpodRemoteSwitchStatusService... [ok]
+module: IPodControlService... IPodAuthCoprocessorV2Impl: Got Request for getDeviceID
+IPODAUTH getDeviceID
+ModelName Airstream A100  HW Revision: 0!
+[ok]
+module: IpodCBService... [ok]
+module: iPodShell... [ok]
+module: IpodVideoCBService... [ok]
+module: IpodVideoContentBrowserShell... [ok]
+module: JBLinkApplication... [ok]
+module: RDMFSPlaylistRetriever... [ok]
+module: JBRServiceInit... initialize: Could not retrieve resource manager service
+Suucceeded to create JBLinkThread thread
+initialize of g_pJBLinkApplication SUCCESS!
+[ok]
+module: FATFileSystem... [ok]
+module: AppleShellCmd... [ok]
+module: ConfigureiTunes... Initializing BCOAppleShellCmd[ok]
+module: ContentBrowserInitModule... [ok]
+module: DelayedExeListModule... SystemData(SystemData.cpp[238]):TRACE ERROR:initialize: system data proxy was already initialized!
+upnpCpService.cpp(294) Could NOT retrieve the Cardea Service !!!!
+RadeaClient_DebugModule(RadeaStreamProcess.cpp[112]):FATAL TRACE ERROR:RadeaStreamProcessor - Could NOT retreive the RhapsodyDirectService!!!
+UIMgr/WelcomeModeHandler(UIWelcomeModeHandler.cpp[95]):FATAL TRACE ERROR:UIWelcomeModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/WelcomeModeHandler(UIWelcomeModeHandler.cpp[101]):FATAL TRACE ERROR:UIWelcomeModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/WelcomeModeHandler(UIWelcomeModeHandler.cpp[106]):FATAL TRACE ERROR:UIWelcomeModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/AirTunesModeHandler(UIAirtunesModeHandler.cpp[81]):FATAL TRACE ERROR:UIAirTunesModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/AirTunesModeHandler(UIAirtunesModeHandler.cpp[87]):FATAL TRACE ERROR:UIAirTunesModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/AirTunesModeHandler(UIAirtunesModeHandler.cpp[92]):FATAL TRACE ERROR:UIAirTunesModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/SpotifyModeHandler(UISpotifyModeHandler.cpp[83]):FATAL TRACE ERROR:UISpotifyModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/SpotifyModeHandler(UISpotifyModeHandler.cpp[89]):FATAL TRACE ERROR:UISpotifyModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/SpotifyModeHandler(UISpotifyModeHandler.cpp[94]):FATAL TRACE ERROR:UISpotifyModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/HomeModeHandler(UIHomeModeHandler.cpp[240]):FATAL TRACE ERROR:UIHomeModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/HomeModeHandler(UIHomeModeHandler.cpp[246]):FATAL TRACE ERROR:UIHomeModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/HomeModeHandler(UIHomeModeHandler.cpp[251]):FATAL TRACE ERROR:UIHomeModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/BrowseModeHandler(UIBrowseModeHandler.cpp[216]):FATAL TRACE ERROR:UIBrowseModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/BrowseModeHandler(UIBrowseModeHandler.cpp[222]):FATAL TRACE ERROR:UIBrowseModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/BrowseModeHandler(UIBrowseModeHandler.cpp[227]):FATAL TRACE ERROR:UIBrowseModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/PlayModeHandler(UIPlayModeHandler.cpp[392]):FATAL TRACE ERROR:UIPlayModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/PlayModeHandler(UIPlayModeHandler.cpp[398]):FATAL TRACE ERROR:UIPlayModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/PlayModeHandler(UIPlayModeHandler.cpp[403]):FATAL TRACE ERROR:UIPlayModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/PlayModeHandler(UIPlayContextModeHandler.cpp[147]):FATAL TRACE ERROR:UIPlayContextModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/PlayModeHandler(UIPlayContextModeHandler.cpp[153]):FATAL TRACE ERROR:UIPlayContextModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/PlayModeHandler(UIPlayContextModeHandler.cpp[158]):FATAL TRACE ERROR:UIPlayContextModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/ConfigModeHandler(UIConfigModeHandler.cpp[122]):FATAL TRACE ERROR:UIConfigModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/ConfigModeHandler(UIConfigModeHandler.cpp[128]):FATAL TRACE ERROR:UIConfigModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/ConfigModeHandler(UIConfigModeHandler.cpp[133]):FATAL TRACE ERROR:UIConfigModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/MsgModeHandler(UIMsgModeHandler.cpp[85]):FATAL TRACE ERROR:UIMsgModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/MsgModeHandler(UIMsgModeHandler.cpp[91]):FATAL TRACE ERROR:UIMsgModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/MsgModeHandler(UIMsgModeHandler.cpp[96]):FATAL TRACE ERROR:UIMsgModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/StandbyModeHandler(UIStandbyModeHandler.cpp[116]):FATAL TRACE ERROR:UIStandbyModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/StandbyModeHandler(UIStandbyModeHandler.cpp[122]):FATAL TRACE ERROR:UIStandbyModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/StandbyModeHandler(UIStandbyModeHandler.cpp[127]):FATAL TRACE ERROR:UIStandbyModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/PlayModeHandler(UIAlbumRatingModeHandler.cpp[146]):FATAL TRACE ERROR:UIAlbumRatingModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/PlayModeHandler(UIAlbumRatingModeHandler.cpp[152]):FATAL TRACE ERROR:UIAlbumRatingModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/PlayModeHandler(UIAlbumRatingModeHandler.cpp[157]):FATAL TRACE ERROR:UIAlbumRatingModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+RatingHandler::RatingHandler() Error: Could NOT retreive the RhapsodyDirectExtCBService!!!
+UIMgr/PicturePlayModeHandler(UIPicturePlayModeHandler.cpp[99]):FATAL TRACE ERROR:UIPicturePlayModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/PicturePlayModeHandler(UIPicturePlayModeHandler.cpp[105]):FATAL TRACE ERROR:UIPicturePlayModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!!!
+UIMgr/PicturePlayModeHandler(UIPicturePlayModeHandler.cpp[110]):FATAL TRACE ERROR:UIPicturePlayModeHandler::DelayedE[ok]
+module: webserverModule... [ok]
+module: webCfgBaseModule... xeObserver() Cannot retreive the FlickrExtService Service!!!
+UIMgr/UIRemoteControlOnlyModeHandler(UIRemoteControlOnlyModeHandler.cpp[161]):FATAL TRACE ERROR:UIRemoteControlOnlyModeHandler::DelayedExeObserver() Could NOT get PandoraService service interface
+UIMgr/UIRemoteControlOnlyModeHandler(UIRemoteControlOnlyModeHandler.cpp[167]):FATAL TRACE ERROR:UIRemoteControlOnlyModeHandler::DelayedExeObserver() Cannot retreive the IRhapsodyDirectExtCBService Service!![ok]
+module: webCfgAppModule... !
+UIMgr/UIRemoteControlOnlyModeHandler(UIRemoteControlOnlyModeHandler.cpp[172]):FATAL TRACE ERROR:UIRemoteControlOnlyModeHandler::DelayedExeObserver() Cannot retreive the FlickrExtService Service!!!
+Web Pages Loaded Succesfully
+[ok]
+module: webCfgNetModule... [ok]
+module: webCfgFavModule... [ok]
+module: DeviceDiscoveryModule... [ok]
+module: ClosedCaptionMetainfoService... [ok]
+module: EthernetAutoDetect... [ok]
+module: JBRemoteServer... [ok]
+module: JBRMcuCommandService... [ok]
+module: JBRJSONService... [ok]
+module: JBRPairCommandHandler... [ok]
+module: JBRCSessionCommandHandler... [ok]
+module: JBRMcuCapabilityHandler... [ok]
+module: JBRUSBBROWSECmdHandler... [ok]
+module: JBRUPnPBROWSECmdHandler... [ok]
+module: JBRIRADIOBROWSECmdHandler... [ok]
+module: JBRiPODBROWSECmdHandler... [ok]
+module: JBRLFMBROWSECmdHandler... [ok]
+module: JBRPandoraBROWSECmdHandler... [ok]
+module: JBRRhapsodyBROWSECmdHandler... [ok]
+module: JBRSetCmdHandler... [ok]
+module: JBRGETCmdHandler... [ok]
+module: JBRPlayCtrlCommandHandler... [ok]
+module: JBRFAVCmdHandler... [ok]
+module: JBRPREMSERVCmdHandler... [ok]
+module: JBRFMCmdHandler... [ok]
+module: TestShellCmd... [ok]
+module: JBRemoteUnitShellCmd... [ok]
+System initialisation done.
+ Module EthernetAutoDetect Start
+
+@@@@@@@@Value of Command being sent is: cccc of len 4Starting IPOD DETECTION and IDPS
+ Module Init EthernetAutoDetect
+ProcessEthernetDetect Tech is WLAN
+ AutoSense is enabled
+Creating the CheckUmacActive timer for first time
+Returning from wlan_wifi_reset_done because either Value: 0 pWlanDevice: 605a90b4
+enter wpa_driver_sulu_init(60ca1444, wifi)
+Registering Reset CB
+Setting WMM to 1
+Firmware registers setting done
+Max Rate: 108
+Network driver #0 status: connected.
+clearing auto IP active flag
+change net state to EIPCFG_DHCP_IN_PROGRESS
+UIModeManager::networkConnectionCB 1 	 0
+DHCP client: got address 192.168.1.167 mask 255.255.255.0
+change net state to EIPCFG_DHCP_FINISHED, IP address: 192.168.1.167
+UIModeManager::networkConnectionCB 4 	 0
+BCOApple Module Available
+IPodAuthCoprocessorV2Impl: Got Request for getCertificateSize
+IPodAuthCoprocessorV2Impl: Got Request for getCertificate
+
+*********************************
+  Event Received from Itune 0 ***
+AirPlay Source Version...: 141.9
+AirPlay SMSC Shim Version: 100.6.1
+************************************
+
+
+  Event Received from Itune 1

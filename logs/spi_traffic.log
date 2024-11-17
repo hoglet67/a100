@@ -1,0 +1,43 @@
+
+02 = Write
+03 = Read
+
+02 45 24 00 52 22 4e 65 74 77 6f 72 6b 69 6e 67 2f 49 70 43 66 67 2f 43 6f 6e 66 69 67 34 2f 4a 42 43 4f 4e 4e 45 43 54
+   ^^ = Configuration Register (69)
+               ^^ Len of following string
+                  ^^ Networking/IpCfg/Config4/JBCONNECT
+
+02 40 06 00 03 02 03 27 01 00 04
+   ^^ = HostRemoteCmd Register (64)
+
+02 40 06 01 02 03 64 00 04
+   ^^ = HostRemoteCmd Register (64)
+
+02 40 06 00 04 02 03 27 01 00 04
+   ^^ = HostRemoteCmd Register (64)
+
+02 40 04 00 03 03 01 08
+   ^^ = HostRemoteCmd Register (64)
+
+02 40 04 00 04 03 01 08
+   ^^ = HostRemoteCmd Register (64)
+
+02 40 04 00 01 03 01 08
+   ^^ = HostRemoteCmd Register (64)
+
+ff 03 25 14 00 ff ff ff ff .....
+      ^^ = Version Image Register (37)
+
+ff 03 25 14 00 ff ff ff ff .....
+      no response
+
+ff 03 25 14 00 ff ff ff ff .....
+      no response
+
+time passes, evevtually
+
+ff 01 00 00 00 ff ff ff ff .....
+      no response
+
+ff 03 25 14 00 ff ff ff ff .....
+      no response
