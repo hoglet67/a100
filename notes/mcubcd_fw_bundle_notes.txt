@@ -1,0 +1,312 @@
+=============================================================================
+MCUBCD.FW Firmware Bundle Notes
+=============================================================================
+
+29/11/24
+
+Monitor Audio distributes the A100 firmware in a proprietary bundle
+named MCUBCD.fw. There are two copies of this on archive.org:
+
+Monitor Audio v632 Firmware Download:
+
+https://web.archive.org/web/20150425004308/http://www.monitoraudiousa.com/assets/files/firmware/a100_6.3.2.zip
+
+Monitor Audio v639 Firmware Download:
+
+https://web.archive.org/web/20160505231108if_/http://ca2.monitoraudiocdn.com/downloads/firmware/A100-Firmware-v639.zip?mtime=20150529123549
+
+MCUBCD.fw bundle includes the Wifi module firmware (FILE1) and the PIC
+firmware (FILE2).
+
+The bundle is simply a concatenation of HEADER, FILE1 and FILE2.
+
+v632 HEADER (32 bytes)
+
+02 00 00 00 - 2 files
+00 08 53 00 - length of FILE1
+00 00 00 00
+ff e7 04 00 - length of FILE2
+72 05 3a e2 - CRC of FILE2 (????)
+7f 02 00 00 - firmware version = 639
+00 00 00 00
+00 00 00 00
+
+v639 HEADER (32 bytes)
+
+02 00 00 00 - 2 files
+00 08 53 00 - length of FILE1
+00 00 00 00
+ff e7 04 00 - length of FILE2
+a5 f6 06 67 - CRC of FILE2 (????)
+7f 02 00 00 - firmware version = 639
+00 00 00 00
+00 00 00 00
+
+The lengths add up and match the total length of MCUBCD.fw:
+
+HEADER 0x000020 =      32
+FILE1  0x530800 = 5441536
+FILE2  0x04e7ff =  321535
+total  0x57f01f = 5763103 
+
+Knowing the file lengths, you can manually split the file using dd:
+
+dd if=MCUBCD.fw of=HEADER bs=1 count=32
+dd if=MCUBCD.fw of=FILE1  bs=1 offset=32 count=5441536
+dd if=MCUBCD.fw of=FILE2  bs=1 offset=5441568
+
+=============================================================================
+FILE1 - the Wifi Module BCD Firmware Image
+=============================================================================
+
+FILE1 has bCoD magic number.
+
+This is the format used by the level 2 bootloader on the Wifi module.
+
+This tool will read it:
+
+https://github.com/benburkhart1/wml11b-firmware-tool/tree/master
+
+Here's the output:
+
+  Firmware information
+  --------------------
+  Timestamp   : 20141205080836  
+  Version     : 114.0.9329
+  Image Size  : 4895344
+  Image Offset: 0xb8
+  Cne Size    : 64988
+  Cne Offset  : 0x4ab328  
+  
+  CRCs
+  Header CRC  : 0xda15e482
+  Image  CRC  : 0x280f57bf
+  CNE    CRC  : 0x316f7173
+  
+  Misc Info
+  Soft ID: 114.0.9329
+  HardComp: 131261
+  Unknown1: 0x7f510 (521488)
+  Unknown2: 0x2 (2)
+  
+  
+  Verifying Checksums
+  --------------------
+  Header CRC mismatch. (da15e482) should be (ce09ff44)
+  Image CRC matched.
+  CNE CRC matched.
+
+
+A BCD file contains a header, image and configuration sections.
+
+We were successfully able to re-flash a new WiFi module by
+
+- Connecting a terminal to the Wifi module UART1 port (there are pads
+  for a 3 pin header on the main A100 PCB). This runs @ 115200
+  baud. After boot up (which takes about 15 seconds) you should get a
+  sds://> prompt.
+
+- Manually configuring a Wifi Network
+
+  cd /cne/Networking/DrvCfg/WlanCfg/Profile1/WPAPSK
+  set Passphrase "Your WLAN Passphrase"
+  cd ..
+  set Security "WPA2PSK"
+  set SSID "Your WLAN SSID"
+
+  After a few seconds a network connection is established (using DHCP).
+
+- Check the IP address
+
+  netcfg
+
+- Connect a browser to http://<IP Address>
+
+- Trigger a firmware update
+
+- At this point the Wifi module rebooted into the level 2 boot loader
+  and a menu is available:
+
+  Bootloader Level 2 Menu  (Aug 30 2012, 14:03:17)
+  ================================================
+   1) Download Image and Config (CnE)
+   2) Download Image Only
+   3) Download resource pages
+   4) Start Image
+   5) Print Image Info
+   6) Mark Image as invalid
+   7) Config (CnE) to factory default
+   8) Program MAC address 0
+   9) Program GUID
+   a) Single Image Write
+   b) Start BIST
+   c) Program TVID
+   d) Set Start Mode
+   e) Exit to Shell
+   f) Download Image, Config and Resources (TFTP)
+   g) Download Image Only (TFTP)
+   h) Download Bootloader (TFTP)
+   i) Download Resources (TFTP)
+   j) Download Image and Resources (TFTP)
+
+Options 1-3 use the XMODEM protocol to transfer the image over the
+serial connection AND program the image into the right area on the
+flash.
+
+I used miniterm as this has XMODEM support built in.
+
+Press the 1 key, then start the XMODEM transfer of FILE1.
+
+Once the image has transferred, press the 4 key to boot into it.
+
+Once you get to the sds://> propmt verify it's the new image with sys ver:
+
+The Wifi boards came with this firmware:
+
+sds://>sys ver
+Library Name                Version                    CVS Tag Name
+-------------------------------------------------------------------------------
+KnOS (Release)              9196 (2012-08-14  23:01:18)JB3_0F_edmp_16MB_NOR-3_8_0-9196_ER
+APP:JB21.0-Ref/HW:JukeBlox2 (Release)9196 (2012-08-14  23:01:18)JB3_0F_edmp_16MB_NOR-3_8_0-9196_ER
+AudioHWService (Release)    9196 (2012-08-14  23:01:18)hal_service-3_3_0-9196_ER
+DM870_HAL (Release)         9196 (2012-08-14  23:01:18)PSM_SDRAM-1_0_0-9196_ER
+
+   Component CreationDate CreationTime       ID  Version  FlashID   BaseAddr     Length
+                 YYYYMMDD       HHMMSS
+---------------------------------------------------------------------------------------
+      DMChip          N/A          N/A        8        0        0 0x00000000 0x00000000
+    Hardware          N/A          N/A      189        0        0 0x00000000 0x00000000
+  Bootloader     20120830       083758        0        0        0 0x40050080 0x00000028
+         Cne     20120817       115206      114     9196        0 0x40020080 0x00000028
+       Image     20120817       115206      114     9196        0 0x401C0080 0x00000028
+
+After the 639 update we get:
+
+
+The boot loader also a web accessible console on:
+http://<IP Address>/bl_
+
+=============================================================================
+FILE2 - the PIC Firmware Image
+=============================================================================
+
+FILE2 extracted from the MCUBCD.FW bundle is PIC firmware for the
+PIC24FJ256GB106 on the main PCB.
+
+Note: This is a raw binary file, and excludes the boot loader and the
+configuration areas. It's just the application code.
+
+The PIC has code-protection enabled, so it's not possible to read the
+full program image with a PicKit ICSP programmer.
+
+Don't do a bulk erase on the PIC, as this will erase the entire
+program memory, including the bootloader and configuration areas. This
+will effectively brick the A100, as we do not have these pieces.
+
+A key question for attempting to manually reprogram the PIC is the
+address to program FILE2 to.
+
+
+These links were useful in understanding PIC24F assembler:
+
+https://www.cs.unca.edu/~bruce/Fall11/255/
+
+https://www.cs.unca.edu/~bruce/Fall11/255/PIC24Architecture.pdf
+
+https://www.cs.unca.edu/~bruce/Fall11/255/PIC24_instruction_set_summary.pdf
+
+
+Start of Application (FILE2)
+
+00000000  10 35 04 00 00 00 00 00  80 24 04 00 01 00 00 00  |.5.......$......|
+00000010  80 24 04 00 01 00 00 00  80 24 04 00 01 00 00 00  |.$.......$......|
+*
+00000040  80 24 04 00 01 00 00 00  b0 16 04 00 01 00 00 00  |.$..............|
+00000050  80 24 04 00 01 00 00 00  80 24 04 00 01 00 00 00  |.$.......$......|
+00000060  80 24 04 00 01 00 00 00  a8 06 04 00 01 00 00 00  |.$..............|
+00000070  80 24 04 00 01 00 00 00  80 24 04 00 01 00 00 00  |.$.......$......|
+*
+000000b0  80 24 04 00 01 00 00 00  84 06 04 00 01 00 00 00  |.$..............|
+000000c0  80 24 04 00 01 00 00 00  80 24 04 00 01 00 00 00  |.$.......$......|
+*
+000000e0  80 24 04 00 01 00 00 00  56 01 04 00 01 00 00 00  |.$......V.......|
+000000f0  80 24 04 00 01 00 00 00  80 24 04 00 01 00 00 00  |.$.......$......|
+*
+00000220  0f a0 20 00 8e fe 23 00  0e 01 88 00 00 00 00 00  |.. ...#.........| <<<<< PIC Code
+
+End of Application (FILE2)
+
+0001e000  00 00 eb 00 fc 18 02 00  01 00 00 00 c0 00 20 00  |.............. .|
+0001e010  a4 8a 02 00 00 00 00 00  a0 00 20 00 bc be 02 00  |.......... .....|
+0001e020  00 00 00 00 00 80 fa 00  00 00 06 00 00 00 fa 00  |................|
+0001e030  9c 6b 02 00 00 00 00 00  00 80 fa 00 00 00 06 00  |.k..............|
+0001e040  10 80 ba 00 00 00 06 00  10 00 ba 00 00 00 06 00  |................|
+0001e050  80 1f 78 00 05 00 fc 00  50 05 20 00 30 3b 88 00  |..x.....P. .0;..|
+0001e060  a0 0a 20 00 30 3b 88 00  61 e7 a8 00 00 00 00 00  |.. .0;..a.......|
+0001e070  00 00 00 00 61 e7 af 00  fe ff 37 00 4f 00 78 00  |....a.....7.O.x.|
+0001e080  00 00 06 00 80 88 bb 00  00 00 06 00 80 c8 bb 00  |................|
+0001e090  00 00 06 00 80 08 bb 00  00 00 06 00 80 48 bb 00  |.............H..|
+0001e0a0  00 00 06 00 00 00 fa 00  91 6d 20 00 91 40 78 00  |.........m ..@x.|
+0001e0b0  00 cc b3 00 00 c0 60 00  50 40 b3 00 d9 e6 b7 00  |......`.P@......|
+0001e0c0  61 6a 20 00 91 40 78 00  00 cc b3 00 00 c0 60 00  |aj ..@x.......`.|
+0001e0d0  40 41 b3 00 a6 e6 b7 00  20 02 20 00 c0 11 88 00  |@A...... . .....|
+0001e0e0  30 62 a8 00 31 e2 a8 00  33 42 a8 00 97 e0 a9 00  |0b..1...3B......|
+0001e0f0  20 00 20 00 e0 30 8a 00  00 80 fa 00 00 00 06 00  | . ..0..........|
+0001e100  00 40 da 00 00 00 fe 00  ff ff ff 00 ff ff ff 00  |.@..............|
+0001e110  ff ff ff 00 ff ff ff 00  ff ff ff 00 ff ff ff 00  |................|
+*
+0004e7ff
+
+1. Instruction addresses are 16-bit word addresses:
+2. Instructions take two 16-bit words
+
+=> PC address 2 is at byte address 4
+
+10 35 04 00 00 00 00 00
+
+00043510
+00000000
+
+= GOTO 0x003510 would jump to byte address 0x006A20
+
+80 24 04 00 01 00 00 00
+
+00042480
+00000001
+
+= GOTO 0x012480 would jump to byte addres 0x024900
+
+
+So where is the Application image intended to be located?
+
+Lets assume there is a offset of 0x6800 bytes (i.e. the image is
+loaded to byte address 0x6800 which is word address 0x3400).
+
+Does this work?
+
+----------------------
+
+0x003510 is at byte offset 0x3510 * 2 - 0x6800 = 0x000220 which is
+very close to the start of the image, and appears to be the first
+instruction.
+
+0f a0 20 00 8e fe 23 00
+
+(immediately preceeded by large block of goto instuctions)
+00003510 0020a00f MOV #20a0, w15  <<<<<<< Reset vector points gere
+00003512 0023fe8e MOV #2f8e, w14
+
+----------------------
+
+0x012480 is at byte offset 0x12480 * 2 - 0x6800 = 0x01e100 which is
+very close to the end of the Image.
+
+00 40 da 00 00 00 fe 00
+
+001247E 00060000 RETURN
+0012480 00da4000 ???                    <<<<<<< GOTOs point here
+0012482 00fe0000 RESET (Assert SYSRST)
+0012484 00ffffff NOP
+0012486 00ffffff NOP
+
+----------------------
