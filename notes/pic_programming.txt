@@ -1,0 +1,55 @@
+=============================================================================
+PIC Programming Notes
+=============================================================================
+
+29/11/24
+
+Converting FILE2 to intel hex format....
+
+srec_cat file2 -binary -offset 0x6800 -output file2.ihex -Intel
+
+Notes:
+- intel hex files are byte addessed
+  word 0x3400 -> byte 0x6800
+  word 0x3510 -> byte 0x6A20
+
+- addresses in data lines are 16-bit
+
+- 02: lines provide address MSB
+
+Here's an annotated example (with extra spaces added):
+
+:02 0000 04 0000 FA
+
+:BB AAAA TT HHHHHHHH HHHHHHHH HHHHHHHH HHHHHHHH CC
+
+:10 6800 00 10350400 00000000 80240400 01000000 96
+:10 6810 00 80240400 01000000 80240400 01000000 26
+:10 6820 00 80240400 01000000 80240400 01000000 16
+...
+:10 6A00 00 80240400 01000000 80240400 01000000 34
+:10 6A10 00 80240400 01000000 80240400 01000000 24
+:10 6A20 00 0FA02000 8EFE2300 0E018800 00000000 51 <<<< PIC Code @ word 0x3510
+:10 6A30 00 0C000700 80FC2D00 01002000 11000700 61
+:10 6A40 00 00002000 0000E000 02003200 00000200 10
+:10 6A50 00 00000000 3AA80200 00000000 0040DA00 38
+:10 6A60 00 0000FE00 4440A900 C0B92000 0000E000 82
+:10 6A70 00 03003200 00002000 A0018800 4440A800 6C
+                  ^^       ^^       ^^       ^^
+
+This looks correct, e.g in comparison with part of a example PIC24 hex
+file from:
+https://forum.microchip.com/s/topic/a5C3l000000MQl4EAG/t332918
+
+:02 0000 04 0000 fa
+:10 1800 00 2f802000 0e7f2400 0e018800 00000000 c1
+:10 1810 00 00012000 20028800 0c000700 a0f22000 38
+:10 1820 00 01002000 11000700 00002000 0000e000 7f
+:10 1830 00 02003200 00000200 00000000 940c0200 d0
+:10 1840 00 00000000 0040da00 0000fe00 4440a900 53
+:10 1850 00 00002000 0000e000 03003200 00002000 33
+:10 1860 00 a0018800 4440a800 00000600 91018800 03
+:10 1870 00 80007800 0000eb00 15003700 e2804000 97
+                  ^^       ^^       ^^       ^^
+
+The "00" columns are in the right place, at the MSB of the "odd" words
