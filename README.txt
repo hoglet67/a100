@@ -16,6 +16,9 @@ Some useful links:
 Monitor Audio User Manual:
 https://www.monitoraudio.com/site/assets/files/20020/a100-manual-en.pdf
 
+Monitor Audio v632 Firmware:
+https://web.archive.org/web/20150425004308/http://www.monitoraudiousa.com/assets/files/firmware/a100_6.3.2.zip
+
 Monitor Audio v639 Firmware:
 https://web.archive.org/web/20160505231108if_/http://ca2.monitoraudiocdn.com/downloads/firmware/A100-Firmware-v639.zip?mtime=20150529123549
 
