@@ -47,7 +47,7 @@ The lengths add up and match the total length of MCUBCD.fw:
 HEADER 0x000020 =      32
 FILE1  0x530800 = 5441536
 FILE2  0x04e7ff =  321535
-total  0x57f01f = 5763103 
+total  0x57f01f = 5763103
 
 Knowing the file lengths, you can manually split the file using dd:
 
@@ -71,25 +71,25 @@ Here's the output:
 
   Firmware information
   --------------------
-  Timestamp   : 20141205080836  
+  Timestamp   : 20141205080836
   Version     : 114.0.9329
   Image Size  : 4895344
   Image Offset: 0xb8
   Cne Size    : 64988
-  Cne Offset  : 0x4ab328  
-  
+  Cne Offset  : 0x4ab328
+
   CRCs
   Header CRC  : 0xda15e482
   Image  CRC  : 0x280f57bf
   CNE    CRC  : 0x316f7173
-  
+
   Misc Info
   Soft ID: 114.0.9329
   HardComp: 131261
   Unknown1: 0x7f510 (521488)
   Unknown2: 0x2 (2)
-  
-  
+
+
   Verifying Checksums
   --------------------
   Header CRC mismatch. (da15e482) should be (ce09ff44)
@@ -182,9 +182,26 @@ DM870_HAL (Release)         9196 (2012-08-14  23:01:18)PSM_SDRAM-1_0_0-9196_ER
 
 After the 639 update we get:
 
+sds://>sys ver
+Library Name                Version                    CVS Tag Name
+-------------------------------------------------------------------------------
+KnOS (Release)              9329 (2012-11-30  01:27:07)JB3_1F_edmp_16MB_NOR-3_8_0-9329_ER
+APP:JB21.0-Ref/HW:JukeBlox2 (Release)9329 (2012-11-30  01:27:07)JB3_1F_edmp_16MB_NOR-3_8_0-9329_ER
+AudioHWService (Release)    9329 (2012-11-30  01:27:07)hal_service-3_3_0-9329_ER
+DM870_HAL (Release)         9329 (2012-11-30  01:27:07)PSM_SDRAM-1_0_0-9329_ER
+
+   Component CreationDate CreationTime       ID  Version  FlashID   BaseAddr     Length
+                 YYYYMMDD       HHMMSS
+---------------------------------------------------------------------------------------
+      DMChip          N/A          N/A        8        0        0 0x00000000 0x00000000
+    Hardware          N/A          N/A      189        0        0 0x00000000 0x00000000
+  Bootloader     20120830       083758        0        0        0 0x40050080 0x00000028
+         Cne     20141205       080836      114     9329        0 0x40020080 0x00000028
+       Image     20141205       080836      114     9329        0 0x401C0080 0x00000028
+
 
 The boot loader also a web accessible console on:
-http://<IP Address>/bl_
+http://<IP Address>/bl_index.asp
 
 =============================================================================
 FILE2 - the PIC Firmware Image
