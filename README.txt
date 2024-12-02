@@ -36,3 +36,6 @@ https://github.com/loop333/pioneer-x-smc55/tree/master
 
 A tool that parses the BCD firmware image file format:
 https://github.com/benburkhart1/wml11b-firmware-tool
+
+Some C++ code that uses ICSP to program a PIC24F from a Pi:
+https://github.com/andyHa/OpenCobra
