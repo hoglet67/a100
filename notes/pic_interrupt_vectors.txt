@@ -1,0 +1,67 @@
+TABLE 7-2: IMPLEMENTED INTERRUPT VECTORS
+
+0	External Interrupt 0		000014
+1	Input Capture 1			000016
+2	Output Compare 1		000018
+3	Timer1				00001A
+
+5	Input Capture 2			00001E
+6	Output Compare 2		000020
+7	Timer2				000022
+8	Timer3				000024
+9	SPI1 Error			000026
+10	SPI1 Event			000028		
+11	UART1 Receiver			00002A
+12	UART1 Transmitter		00002C
+13	ADC1 Conversion Done		00002E
+
+16	I2C1 Slave Event		000034
+17	I2C1 Master Event		000036
+18	Comparator Event		000038
+19	Input Change Notification	00003A
+20	External Interrupt 1		00003C
+
+22	Input Capture 7			000040
+23	Input Capture 8			000042
+
+25	Output Compare 3		000046
+26	Output Compare 4		000048
+27	Timer4				00004A
+28	Timer5				00004C
+29	External Interrupt 2		00004E
+30	UART2 Receiver			000050
+31	UART2 Transmitter		000052
+32	SPI2 Error			000054		
+33	SPI2 Event			000056
+37	Input Capture 3			00005E
+38	Input Capture 4			000060
+39	Input Capture 5			000062
+40	Input Capture 6			000064
+41	Output Compare 5		000066
+42	Output Compare 6		000068
+43	Output Compare 7		00006A
+44	Output Compare 8		00006C
+45	Parallel Master Port		00006E
+49	I2C2 Slave Event		000076
+50	I2C2 Master Event		000078
+53	External Interrupt 3		00007E
+54	External Interrupt 4		000080
+62	Real-Time Clock/Calendar	000090
+65	UART1 Error			000096
+66	UART2 Error			000098
+67	CRC Generator			00009A
+72	LVD Low-Voltage Detect		0000A4
+77	CTMU Event			0000AE
+81	UART3 Error			0000B6
+82	UART3 Receiver			0000B8
+83	UART3 Transmitter		0000BA
+84	I2C3 Slave Event		0000BC
+85	I2C3 Master Event		0000BE
+86	USB Interrupt			0000C0
+87	UART4 Error			0000C2
+88	UART4 Receiver			0000C4
+89	UART4 Transmitter		0000C6
+90	SPI3 Error			0000C8
+91	SPI3 Event			0000CA
+92	Output Compare 9		0000CC
+93	Input Capture 9			0000CE
