@@ -1,0 +1,87 @@
+On power-up the unit enters standby. At this point the WiFi board is
+power down (3V3, 1V9 and 1V2 all off)
+
+Pressing the on button (on the unit or remote) powers up the Wifi
+board and it starts booting.
+
+On the black A100 (639 firmware) ONLY about 10 seconds into the boot
+there is a forced reboot of the Wifi card. At the end of the boot, the
+status light ends up sold blue. Unit then works normally.
+
+On the white A100 (632 firmware?) this second reboot doesn't occur. At
+the end of the boot, the status light ends up flashing blue, and the
+wifi log contains lots of "Invalid SPI Message" errors. Unit then
+works abnormally.
+
+Key discovery: if you manually reboot the white A100 about 10 seconds
+into the boot (after the "AutoSense is enabled" message), then it
+behaves identially to the black A100. At the end of the boot, the
+status light ends up sold blue. Unit then works normally.
+
+The second reboot also needs to occur whenever the unit comes out of
+standby.
+
+Here are some sample log files:
+
+a100_1a_powerup.log              - black a100 booting normally
+
+a100_2d_powerup.log              - white a100 booting abnormally
+
+a100_2c_powerup_and_reboot.log   - white a100 normally
+                                   (a sys reboot done after 10s)
+
+The NRESET input of the Wifi module connects to PORTD.1 (pin 49) of
+the PIC Microcontroller.
+
+Looking at the PIC disassembly and comparing v632 and v639 there are
+some additions to v639. Specifically:
+
+
+v632:
+06C26 A902CA BCLR PORTB, #0
+06C28 02203E CALL 0x1203E
+06C2A 000001 NOP
+06C2C A922DA BCLR PORTD, #1   ; assert reset
+06C2E 02F4DC CALL 0xF4DC
+06C30 000000 NOP
+06C32 028A90 CALL 0x8A90
+06C34 000000 NOP
+06C36 02F4CA CALL 0xF4CA
+06C38 000000 NOP
+06C3A A9E2C9 BCLR 0x2C9, #7
+06C3C 000000 NOP
+06C3E 000000 NOP
+06C40 000000 NOP
+06C42 A9E2CB BCLR 0x2CB, #7
+
+v639:
+06C36 A902CA BCLR PORTB, #0
+06C38 02212C CALL 0x1212C
+06C3A 000001 NOP
+06C3C 02F5CA CALL 0xF5CA
+06C3E 000000 NOP
+06C40 02BCBC CALL 0xBCBC      ; extra call to blip reset
+06C42 000000 NOP
+06C44 028A9C CALL 0x8A9C
+06C46 000000 NOP
+06C48 02F5B8 CALL 0xF5B8
+06C4A 000000 NOP
+06C4C A9E2C9 BCLR 0x2C9, #7
+06C4E 000000 NOP
+06C50 000000 NOP
+06C52 000000 NOP
+06C54 A9E2CB BCLR 0x2CB, #7
+
+0BCBC FA0000 LNK #0x0
+0BCBE A922DA BCLR PORTD, #1   ; asset reset on wifi card
+0BCC0 02212C CALL 0x1212C     ; fixed delay ?
+0BCC2 000001 NOP
+0BCC4 02212C CALL 0x1212C     ; fixed delay ?
+0BCC6 000001 NOP
+0BCC8 A822DA BSET PORTD, #1   ; release reset on wifi card
+0BCCA FA8000 ULNK
+0BCCC 060000 RETURN
+
+It's still possible this is just a cosmetic change (some code moved
+around), but I think there's a good chance v639 does have different
+behaviour in reset, and this is critical to safe operation.
