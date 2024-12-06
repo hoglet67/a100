@@ -1,0 +1,110 @@
+sds://>os load
+                idle time (98.66) ##################################   (157781507)
+                 irq time ( 1.10)                                      (1764411)
+      System Timer Thread ( 0.05)                                      (93284)
+               coreThread ( 0.00)                                      (0)
+       CneCacheFlushTimer ( 0.00)                                      (0)
+           CuEngineUpdate ( 0.00)                                      (0)
+       PowerManagerThread ( 0.00)                                      (0)
+                Inet main ( 0.00)                                      (7331)
+               clock tick ( 0.00)                                      (12955)
+         PING application ( 0.00)                                      (0)
+                 thMacbTx ( 0.00)                                      (0)
+                 thMacbRx ( 0.00)                                      (0)
+        thMacbRxForwarder ( 0.00)                                      (0)
+               WlanThread ( 0.10)                                      (163951)
+                WlanTimer ( 0.00)                                      (5227)
+       AutoIPStateMachine ( 0.00)                                      (0)
+            WpaSupplicant ( 0.05)                                      (90506)
+WpaSupplicantWlConnection ( 0.00)                                      (0)
+           USBDrvRxThread ( 0.00)                                      (0)
+            RDMFS Functor ( 0.00)                                      (0)
+             USBStackImpl ( 0.00)                                      (0)
+        USBHostController ( 0.00)                                      (0)
+                Webserver ( 0.00)                                      (4529)
+         netConnexHandler ( 0.00)                                      (0)
+        WebFirmwareUpdate ( 0.00)                                      (0)
+  FwUpdateInternetHandler ( 0.00)                                      (0)
+         bootloaderThread ( 0.00)                                      (0)
+         USBAdaptionLayer ( 0.00)                                      (0)
+            RDMFS_TestApp ( 0.00)                                      (0)
+          IpStatusUpdater ( 0.00)                                      (0)
+    NetInterface Notifier ( 0.00)                                      (0)
+NetInterfaceChangeNotifie ( 0.00)                                      (0)
+ NetworkInterfaceSwitcher ( 0.00)                                      (0)
+ MemoryBlobFirmwareUpdate ( 0.00)                                      (0)
+  FwUpdateInternetHandler ( 0.00)                                      (0)
+              ShellThread ( 0.00)                                      (1628)
+
+sds://>os q
+ n                          name peak  inQ free   threads
+ 1      CneCacheFlushTimer_Queue    0    0   10 CneCacheFlushTimer
+ 2          CuEngineUpdate_Queue    0    0   10 CuEngineUpdate
+ 3      PowerManagerThread_Queue    1    0   20 PowerManagerThread
+ 4                       qMacbRx    0    0   64 thMacbRx
+ 5                        qRxPkt    0    0   32     -
+ 6                        qTxPkt    0    0    4 thMacbTx
+ 7      AutoIPStateMachine_Queue    0    0   10 AutoIPStateMachine
+ 8      WpaSupplicantWlConnectio    6    0   20 WpaSupplicantWlConnectio
+ 9        UsbBusDrv LocalRxQueue    0    0    8 USBDrvRxThread
+10        UsbBusDrv LocalTxQueue    1    0    8     -
+11           RDMFS Functor_Queue    1    0   20 RDMFS Functor
+12            USBStackImpl_Queue    1    0   50 USBStackImpl
+13       USBHostController_Queue    0    0   20 USBHostController
+14        netConnexHandler_Queue    1    0   20 netConnexHandler
+15       WebFirmwareUpdate_Queue    0    0   20 WebFirmwareUpdate
+16      FwUpdateInternetHandler_    0    0   16 FwUpdateInternetHandler
+17        USBAdaptionLayer_Queue    0    0   20 USBAdaptionLayer
+18           RDMFS_TestApp_Queue    0    0   20 RDMFS_TestApp
+19         IpStatusUpdater_Queue    1    0   20 IpStatusUpdater
+20      NetInterfaceChangeNotifi    0    0   20 NetInterfaceChangeNotifi
+21      NetworkInterfaceSwitcher    0    0   40 NetworkInterfaceSwitcher
+22      NetInterfaceChange Notif    0    0    5 NetInterface Notifier
+23      MemoryBlobFirmwareUpdate    0    0   20     -
+24      FwUpdateInternetHandler_    0    0   16 FwUpdateInternetHandler
+25                       WlanTxQ    1    0 1000     -
+26                         Queue    1    0   64     -
+
+sds://>os th
+ n                     name    pri state       cnt stackU  stackT stackStart
+ 1         supervisor stack                           380    1024
+ 2        user system stack                           160     384
+ 3                irq stack                            68     352
+ 4                fiq stack                             0      32
+ 5        abort undef stack                             0     128
+
+ 6      System Timer Thread  0/ 0/0 susp     66604    195    1024 0x004025d0
+ 7               coreThread  1/ 1/0 term         3
+ 8       CneCacheFlushTimer 24/24/1    q         1    171    4096 0x604e4898
+ 9           CuEngineUpdate 24/24/1    q         1    171    4096 0x604eb300
+10       PowerManagerThread 24/24/1    q         3    295    4096 0x604ec310
+11                Inet main 11/10/1  sem       887   1259    4096 0x604edfc0
+12               clock tick 11/10/1sleep      4976    347    2048 0x604eefd0
+13         PING application 11/10/1 susp      2201     99     512 0x604e7ed0
+14                 thMacbTx 22/22/0    q         1    339    1024 0x6063afa0
+15                 thMacbRx 21/21/0    q         1    339    1024 0x6063b3b0
+16        thMacbRxForwarder 21/21/0 susp         0     75    2048 0x6063b7c0
+17               WlanThread  9/ 9/1  sem      3582   1991    4096 0x6063bfd0
+18                WlanTimer 15/15/1sleep      2773    167    4096 0x6063cfe0
+19       AutoIPStateMachine 24/24/1    q         2    171    3000 0x60667100
+20            WpaSupplicant 24/24/1sleep     27890   1243    4096 0x60667cc8
+21WpaSupplicantWlConnection 24/24/1    q         7    259    4096 0x60668f10
+22           USBDrvRxThread  4/ 4/1    q        25    155    2048 0x00402c88
+23            RDMFS Functor 24/24/1    q         3    619    4096 0x6066a3e0
+24             USBStackImpl  8/ 8/1    q        38    719    2048 0x6066b3f0
+25        USBHostController 24/24/1    q        16   1035    4096 0x60673d88
+26                Webserver 24/24/1  sem       556   1403    4096 0x60674d98
+27         netConnexHandler 24/24/1    q        56    595    4096 0x60675da8
+28        WebFirmwareUpdate 24/24/1    q         1    171    4096 0x60678ca0
+29  FwUpdateInternetHandler 24/24/1    q         1    171    4096 0x6067aab0
+30         bootloaderThread 24/ 0/1 comp       875    691    4096 0x6067ed20
+31         USBAdaptionLayer 24/24/1    q        28   1399    4096 0x6067fd30
+32            RDMFS_TestApp 10/10/1    q         1    459    4096 0x60682ce0
+33          IpStatusUpdater 24/24/1    q         6   1087    4096 0x60684160
+34    NetInterface Notifier 24/24/1    q         1    259    4096 0x60685398
+35NetInterfaceChangeNotifie 24/24/1    q         1    171    4096 0x606863a8
+36 NetworkInterfaceSwitcher 24/24/1    q         1    171    4096 0x606873b8
+37 MemoryBlobFirmwareUpdate 24/24/1 susp         0     75    4096 0x606893e8
+38  FwUpdateInternetHandler 24/24/1    q         1    171    5120 0x6068af98
+39              ShellThread 24/24/1  rdy        85   1235    8192 0x6068ce00
+                Totals                         17707  118200

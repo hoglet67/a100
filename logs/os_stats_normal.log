@@ -1,0 +1,334 @@
+sds://>os load
+                idle time (90.28) ###############################      (144434466)
+                 irq time ( 4.83) #                                    (7732394)
+      System Timer Thread ( 0.17)                                      (274028)
+               coreThread ( 0.00)                                      (0)
+       CneCacheFlushTimer ( 0.00)                                      (0)
+           CuEngineUpdate ( 0.00)                                      (0)
+       PowerManagerThread ( 0.00)                                      (0)
+                Inet main ( 0.00)                                      (1132)
+               clock tick ( 0.04)                                      (64737)
+         PING application ( 0.00)                                      (0)
+               WlanThread ( 0.14)                                      (224421)
+                WlanTimer ( 0.00)                                      (11766)
+       AutoIPStateMachine ( 0.00)                                      (0)
+            WpaSupplicant ( 0.09)                                      (157063)
+WpaSupplicantWlConnection ( 0.00)                                      (0)
+      StreamDeviceMgrImpl ( 0.00)                                      (0)
+             Unmute Timer ( 0.00)                                      (0)
+     StreamDeviceObserver ( 0.00)                                      (0)
+        SharedTimerThread ( 0.06)                                      (111433)
+           USBDrvRxThread ( 0.00)                                      (0)
+            RDMFS Functor ( 0.00)                                      (0)
+             USBStackImpl ( 0.00)                                      (0)
+        USBHostController ( 0.00)                                      (0)
+   UPnP activation thread ( 0.00)                                      (0)
+                 SsdpPort ( 0.00)                                      (0)
+           ReceiverThread ( 0.00)                                      (0)
+              ShellThread ( 0.00)                                      (4586)
+                PSMThread ( 0.00)                                      (0)
+         USBAdaptionLayer ( 0.00)                                      (0)
+               GenaThread ( 0.00)                                      (0)
+          GenaEventThread ( 0.00)                                      (0)
+            CDSRepository ( 0.01)                                      (21984)
+                     Ssdp ( 0.00)                                      (3157)
+      UpnpNotificationSvc ( 0.00)                                      (0)
+       UpnpContentBrowser ( 0.00)                                      (0)
+  NapContentManagerThread ( 0.00)                                      (0)
+            NapCoreThread ( 0.00)                                      (0)
+         NapManagerThread ( 0.00)                                      (0)
+          NapOutputThread ( 2.89) #                                    (4630022)
+          Radea Processor ( 0.00)                                      (0)
+          RolloverManager ( 0.00)                                      (0)
+        RtspSessionThread ( 0.00)                                      (0)
+             ActiveSocket ( 0.00)                                      (0)
+             ActiveSocket ( 0.00)                                      (0)
+             ActiveSocket ( 0.00)                                      (0)
+         RtspSessionTimer ( 0.00)                                      (0)
+          RDMFS Processor ( 0.00)                                      (0)
+          OverloadMonitor ( 0.00)                                      (0)
+             SPI Receiver ( 1.40)                                      (2247040)
+       SearchFwUrlHandler ( 0.00)                                      (0)
+         AVRPlayerService ( 0.00)                                      (0)
+              Ipodioscomm ( 0.00)                                      (0)
+NewSelectedIpProfile_IpSt ( 0.00)                                      (0)
+    Remote wifi test mode ( 0.00)                                      (0)
+RemoteRegCtrldFileTransfe ( 0.00)                                      (0)
+          Wr2_Application ( 0.00)                                      (5370)
+                    Timer ( 0.00)                                      (0)
+       PoolAllocCompactor ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+                    Timer ( 0.00)                                      (0)
+UIRemoteControlOnlyModeHa ( 0.00)                                      (0)
+UIRemoteControlOnlyModeHa ( 0.00)                                      (0)
+               SsdpRecUDP ( 0.00)                                      (0)
+           SPI Command Th ( 0.00)                                      (0)
+                WRCThread ( 0.00)                                      (4571)
+         WRCUpdAllowEvtTm ( 0.00)                                      (0)
+       PoolAllocCompactor ( 0.00)                                      (0)
+         RemoteCmdHandler ( 0.00)                                      (0)
+                 cmdTimer ( 0.00)                                      (0)
+       UPnPMrServerThread ( 0.00)                                      (0)
+             UPnP Adapter ( 0.00)                                      (0)
+             UPnP Adapter ( 0.00)                                      (0)
+             UPnP Adapter ( 0.00)                                      (0)
+                  WHACore ( 0.00)                                      (0)
+            NtpReqHandler ( 0.00)                                      (0)
+            USBPlayDirect ( 0.00)                                      (0)
+         StreamStatusInfo ( 0.00)                                      (0)
+          IpodSimpleEntry ( 0.00)                                      (0)
+          iPodTelegramRec ( 0.00)                                      (0)
+              Ipodioscomm ( 0.00)                                      (0)
+         Ipodaccequalizer ( 0.00)                                      (0)
+              iPodControl ( 0.01)                                      (17349)
+                iPodCBSvc ( 0.00)                                      (0)
+                iPodCBSvc ( 0.00)                                      (0)
+            NetworkStatus ( 0.00)                                      (0)
+             ipodObserver ( 0.00)                                      (0)
+             JBLinkThread ( 0.00)                                      (4867)
+           JBRServiceInit ( 0.00)                                      (0)
+                 testipod ( 0.00)                                      (0)
+          ConfigureiTunes ( 0.00)                                      (0)
+                Webserver ( 0.00)                                      (8752)
+          DeviceDiscovery ( 0.00)                                      (0)
+ClosedCaptionMetainfoServ ( 0.00)                                      (0)
+           EthernetDetect ( 0.00)                                      (1271)
+       JBRemoteCtrlThread ( 0.00)                                      (3235)
+       PoolAllocCompactor ( 0.00)                                      (0)
+           JBRJSONService ( 0.00)                                      (0)
+              JBRPairInit ( 0.00)                                      (0)
+                JBRCSInit ( 0.00)                                      (0)
+    JBR_XML_Parser_thread ( 0.00)                                      (0)
+            JBRGetHandler ( 0.00)                                      (0)
+             ipodOBServer ( 0.00)                                      (0)
+       PoolAllocCompactor ( 0.00)                                      (0)
+           ConfigureTunes ( 0.00)                                      (0)
+          UPnP TCP Thread ( 0.00)                                      (6802)
+         UPnP Evnt Sender ( 0.00)                                      (1034)
+         UPnP Evnt Thread ( 0.00)                                      (2160)
+         UPnP Disc Thread ( 0.00)                                      (0)
+                  pthread ( 0.00)                                      (7072)
+                  pthread ( 0.00)                                      (4854)
+                  pthread ( 0.00)                                      (0)
+sds://>os q
+ n                          name peak  inQ free   threads
+ 1      CneCacheFlushTimer_Queue    0    0   10 CneCacheFlushTimer
+ 2          CuEngineUpdate_Queue    0    0   10 CuEngineUpdate
+ 3      PowerManagerThread_Queue    1    0   20 PowerManagerThread
+ 4      AutoIPStateMachine_Queue    0    0   10 AutoIPStateMachine
+ 5      WpaSupplicantWlConnectio    5    0   20 WpaSupplicantWlConnectio
+ 6      StreamDeviceMgrImpl_Queu    3    0   10 StreamDeviceMgrImpl
+ 7      StreamDeviceObserver_Que    1    0   10 StreamDeviceObserver
+ 8       SharedTimerThread_Queue    2    0   20 SharedTimerThread
+ 9        UsbBusDrv LocalRxQueue    0    0    8 USBDrvRxThread
+10        UsbBusDrv LocalTxQueue    0    0    8     -
+11           RDMFS Functor_Queue    4    0   20 RDMFS Functor
+12            USBStackImpl_Queue    1    0   50 USBStackImpl
+13       USBHostController_Queue    0    0   20 USBHostController
+14      UPnP activation thread_Q    0    0   40 UPnP activation thread
+15          ReceiverThread_Queue    0    0   20 ReceiverThread
+16               PSMThread_Queue    1    0   10 PSMThread
+17        USBAdaptionLayer_Queue    0    0   20 USBAdaptionLayer
+18              GenaThread_Queue    0    0   20 GenaThread
+19      UpnpContentBrowser_Queue    0    0   20 UpnpContentBrowser
+20      NapContentManagerThread_    0    0   20 NapContentManagerThread
+21           NapCoreThread_Queue    1    0   64 NapCoreThread
+22        NapManagerThread_Queue    0    0  128 NapManagerThread
+23         NapOutputThread_Queue    5    0   20     -
+24                AudioOutput_44  512  512    0 NapOutputThread
+25         Radea Processor_Queue    0    0    5 Radea Processor
+26         RolloverManager_Queue    0    0   20 RolloverManager
+27       RtspSessionThread_Queue    0    0   20     -
+28         RDMFS Processor_Queue    0    0   20 RDMFS Processor
+29      SearchFwUrlHandler_Queue    0    0   24 SearchFwUrlHandler
+30        AVRPlayerService_Queue    0    0   32 AVRPlayerService
+31             Ipodioscomm_Queue    0    0  128 Ipodioscomm
+32      NewSelectedIpProfile_IpS    0    0   60 NewSelectedIpProfile_IpS
+33      Remote wifi test mode_Qu    0    0    4 Remote wifi test mode
+34      RemoteRegCtrldFileTransf    0    0   20 RemoteRegCtrldFileTransf
+35         Wr2_Application_Queue    3    0  224 Wr2_Application
+36      UIRemoteControlOnlyModeH    0    0  128 UIRemoteControlOnlyModeH
+37      UIRemoteControlOnlyModeH    0    0  128 UIRemoteControlOnlyModeH
+38          SPI Command Th_Queue    0    0   20 SPI Command Th
+39        RemoteCmdHandler_Queue    0    0   20 RemoteCmdHandler
+40      UPnPMrServerThread_Queue    0    0   16 UPnPMrServerThread
+41                 WHACore_Queue    0    0  150 WHACore
+42           NtpReqHandler_Queue    0    0   16 NtpReqHandler
+43           USBPlayDirect_Queue    0    0   16 USBPlayDirect
+44        StreamStatusInfo_Queue    0    0   16 StreamStatusInfo
+45         IpodSimpleEntry_Queue    0    0  128 IpodSimpleEntry
+46                   iPodTelAppQ    0    0  100     -
+47                   iPodTelRecQ    0    0  100     -
+48         iPodTelegramRec_Queue    0    0   20 iPodTelegramRec
+49             Ipodioscomm_Queue    0    0   20 Ipodioscomm
+50        Ipodaccequalizer_Queue    0    0   20 Ipodaccequalizer
+51             iPodControl_Queue    1    0   20     -
+52               iPodCBSvc_Queue    0    0   32 iPodCBSvc
+53               iPodCBSvc_Queue    0    0   32 iPodCBSvc
+54           NetworkStatus_Queue    0    0   20 NetworkStatus
+55            ipodObserver_Queue    0    0   20 ipodObserver
+56            JBLinkThread_Queue    1    0   20     -
+57          JBRServiceInit_Queue    0    0   10 JBRServiceInit
+58                testipod_Queue    1    1   19     -
+59         ConfigureiTunes_Queue    0    0   10 ConfigureiTunes
+60         DeviceDiscovery_Queue    1    0   20 DeviceDiscovery
+61      ClosedCaptionMetainfoSer    0    0   20 ClosedCaptionMetainfoSer
+62          EthernetDetect_Queue    1    0   10     -
+63          JBRJSONService_Queue   20    0   20 JBRJSONService
+64             JBRPairInit_Queue    1    0   10 JBRPairInit
+65               JBRCSInit_Queue    2    0   10 JBRCSInit
+66      JBR_XML_Parser_thread_Qu    0    0   20 JBR_XML_Parser_thread
+67           JBRGetHandler_Queue    0    0   10 JBRGetHandler
+68            ipodOBServer_Queue    0    0   20     -
+69                       WlanTxQ    0    0  200     -
+70                       WlanTxQ    0    0  200     -
+71                       WlanTxQ    1    0  200     -
+72                       WlanTxQ    0    0  200     -
+73                         Queue    1    0   64     -
+74          ConfigureTunes_Queue    1    0   20 ConfigureTunes
+75              UPnP Evnt Sender    0    0  128 UPnP Evnt Sender
+76      UPnP Adapter Event Queue    0    0    5 UPnP Adapter
+77      UPnP Adapter Event Queue    0    0    5 UPnP Adapter
+78      UPnP Adapter Event Queue    0    0    5 UPnP Adapter
+sds://>os th
+ n                     name    pri state       cnt stackU  stackT stackStart
+ 1         supervisor stack                           676    1024
+ 2        user system stack                           220     384
+ 3                irq stack                            68     352
+ 4                fiq stack                             0      32
+ 5        abort undef stack                             0     128
+
+ 6      System Timer Thread  0/ 0/0 susp     43139    183    1024 0x00403c90
+ 7               coreThread  1/ 1/0 term         3
+ 8       CneCacheFlushTimer 24/24/1    q         1    171    4096 0x60624178
+ 9           CuEngineUpdate 24/24/1    q         1    171    4096 0x60637f78
+10       PowerManagerThread 24/24/1    q        18    527    4096 0x60638f88
+11                Inet main 11/10/1  sem       650   1615    4096 0x60647e10
+12               clock tick 11/10/1sleep       968    331    2048 0x60648e20
+13         PING application 11/10/1 susp         1     99     512 0x60649630
+14               WlanThread  9/ 9/1  sem      1510   2355    4096 0x608dd230
+15                WlanTimer 15/15/1sleep       788    155    4096 0x608de240
+16       AutoIPStateMachine 24/24/1    q         2    171    3000 0x60931478
+17            WpaSupplicant 24/24/1sleep     14736   1243    4096 0x60932040
+18WpaSupplicantWlConnection 24/24/1    q       695   1651    4096 0x60933e30
+19      StreamDeviceMgrImpl 14/14/1    q        17    987    2048 0x60934e40
+20             Unmute Timer 24/24/1 evsu         1    131    1024 0x60935650
+21     StreamDeviceObserver 24/24/1    q         6    203    1024 0x60935a60
+22        SharedTimerThread  1/ 1/1    q      1603    327    4096 0x60935e70
+23           USBDrvRxThread  4/ 4/1    q        39    155    2048 0x00404188
+24            RDMFS Functor 24/24/1    q        10    631    4096 0x60938820
+25             USBStackImpl  8/ 8/1    q        54    731    2048 0x60939830
+26        USBHostController 24/24/1    q        24   1035    4096 0x609421c8
+27   UPnP activation thread 24/24/1    q        68    651    4096 0x60943448
+28                 SsdpPort 24/24/1  sem       456   1799    4096 0x60944458
+29           ReceiverThread  9/ 9/1    q         1    171    4096 0x60945468
+30              ShellThread 24/24/1  rdy       405   1235    8192 0x60947528
+31                PSMThread 24/24/1    q         4    179    3072 0x6094a4b8
+32         USBAdaptionLayer 24/24/1    q        86   1399    4096 0x6094e3e0
+33               GenaThread 24/24/1    q         1    171    2048 0x6094f9a8
+34          GenaEventThread 24/24/1  sem       102    827    2048 0x609501b8
+35            CDSRepository 24/24/1sleep      1341   2555    3100 0x60951730
+36                     Ssdp 24/24/1sleep       319    551    1024 0x60957d70
+37      UpnpNotificationSvc 24/24/1 evsu         7    219    4096 0x609584e0
+38       UpnpContentBrowser 24/24/1    q         6    315    4096 0x609594f0
+39  NapContentManagerThread 24/24/1    q         1    171   10240 0x6095aa10
+40            NapCoreThread 23/23/1    q         2    171    4096 0x6095d220
+41         NapManagerThread 24/24/1    q         2    171    4096 0x6095e230
+42          NapOutputThread  9/ 9/1    q    424834    335    4096 0x6095f450
+43          Radea Processor 10/10/1    q         1    171    6144 0x609c52e0
+44          RolloverManager  9/ 9/1    q         1    227    4072 0x609c6d60
+45        RtspSessionThread 24/20/1 susp         0     75    2048 0x609d0720
+46             ActiveSocket 24/20/1  sem         1    303    4096 0x609d0f30
+47             ActiveSocket 24/20/1  sem         1    303    4096 0x609d1f40
+48             ActiveSocket 24/20/1  sem         1    303    4096 0x609d2f50
+49         RtspSessionTimer 24/24/1 evsu         2    147    1024 0x609d3f60
+50          RDMFS Processor  9/ 9/1    q         2    243    3072 0x609d66a8
+51          OverloadMonitor 23/23/1 evsu         1    107*    256 0x609614e4
+52             SPI Receiver  4/ 4/1  sem     34070    291    4096 0x60b65908
+53       SearchFwUrlHandler 24/24/1    q         1    171    5120 0x60b66bd0
+54         AVRPlayerService 22/22/1    q         3    315    6144 0x60b683a8
+55              Ipodioscomm 24/24/1    q         1    171    8000 0x60b69bb8
+56NewSelectedIpProfile_IpSt 26/26/1    q        38   1239    2048 0x60b70de0
+57    Remote wifi test mode 24/24/1    q         1    171    4096 0x60b72f80
+58RemoteRegCtrldFileTransfe 24/24/1    q         1    171    2048 0x60b73f90
+59          Wr2_Application 24/24/1    q       195   1287   10000 0x60b747a0
+60                    Timer 24/24/1 evsu         1    131    4096 0x60b77488
+61       PoolAllocCompactor 24/24/1 evsu         1    115    1024 0x60b78ca8
+62                    Timer 24/24/1 evsu         1    131    4096 0x60b7a0b0
+63                    Timer 24/24/1 evsu         1    131    4096 0x60bad260
+64                    Timer 24/24/1 evsu         1    131    4096 0x60bae270
+65                    Timer 24/24/1 evsu         1    131    4096 0x60baf280
+66                    Timer 24/24/1 evsu         1    131    4096 0x60bb0290
+67                    Timer 24/24/1 evsu         1    131    4096 0x60bb1580
+68                    Timer 24/24/1 evsu         1    131    4096 0x60bb2590
+69                    Timer 24/24/1 evsu         1    131    4096 0x60bb4510
+70                    Timer 24/24/1 evsu         1    131    4096 0x60bb7ac0
+71                    Timer 24/24/1 evsu         1    131    4096 0x60bb8ad0
+72                    Timer 24/24/1 evsu         1    131    4096 0x60bb9ae0
+73                    Timer 24/24/1 evsu         1    131    4096 0x60bbaaf0
+74                    Timer 24/24/1 evsu         1    131    4096 0x60bbca28
+75UIRemoteControlOnlyModeHa 24/24/1    q         1    171    8000 0x60bbda38
+76UIRemoteControlOnlyModeHa 24/24/1    q         1    171    8000 0x60bbfb98
+77               SsdpRecUDP 24/24/1  sem        76   1171    4096 0x60bc8808
+78           SPI Command Th 21/21/1    q         4    555    6000 0x60bc9c18
+79                WRCThread 24/24/1  sem       205    611    7000 0x60bcb398
+80         WRCUpdAllowEvtTm 24/24/1 evsu         1    131    4096 0x60bccf00
+81       PoolAllocCompactor 24/24/1 evsu         1    115    1024 0x60bce320
+82         RemoteCmdHandler 24/24/1    q         1    171    4096 0x60bceba8
+83                 cmdTimer 24/24/1 evsu         1    131    4096 0x60bd0fb8
+84       UPnPMrServerThread 24/24/1    q         1    179    1500 0x60bd1fc8
+85             UPnP Adapter 24/24/1    q         9    399    4096 0x60bd25b8
+86             UPnP Adapter 24/24/1    q         9    399    4096 0x60bd55d8
+87             UPnP Adapter 24/24/1    q        10    399    4096 0x60bd6800
+88                  WHACore 24/24/1    q         4    291    4096 0x60bd7a38
+89            NtpReqHandler 26/26/1    q         1    171    4096 0x60bd8cb0
+90            USBPlayDirect 26/26/1    q         1    171    2048 0x60bd9cc0
+91         StreamStatusInfo 26/26/1    q         1    171    2048 0x60bda4d0
+92          IpodSimpleEntry 24/24/1    q         1    171    8000 0x60bdb018
+93          iPodTelegramRec 21/20/1    q         1    171    4096 0x60c0f108
+94              Ipodioscomm 24/24/1    q         1    171    4096 0x60c10118
+95         Ipodaccequalizer 24/24/1    q         1    171    4096 0x60c11128
+96              iPodControl 22/20/1sleep      1576    519    4096 0x60c12d00
+97                iPodCBSvc 23/23/1    q         1    227    2048 0x60c13d10
+98                iPodCBSvc 23/23/1    q         1    171    2048 0x60c14520
+99            NetworkStatus 24/24/1    q         3    171    4096 0x60c14d30
+100             ipodObserver 24/24/1    q         1    171    4096 0x60c15d40
+101             JBLinkThread 24/24/1sleep       793    247    4096 0x60c16d50
+102           JBRServiceInit 24/24/1    q         1    171    4096 0x60c17d60
+103                 testipod 24/24/1 susp         0     75    4096 0x60c18d70
+104          ConfigureiTunes 24/24/1    q         1    171    4096 0x60c19d80
+105                Webserver 24/24/1  sem       359   1387  131072 0x60c1bc90
+106          DeviceDiscovery 24/24/1    q         2    739    2048 0x60ca5bc0
+107ClosedCaptionMetainfoServ 24/24/1    q         1    171    4096 0x60ca8670
+108           EthernetDetect 26/24/1sleep        84    791    2400 0x60ca9680
+109       JBRemoteCtrlThread 24/24/1  sem       207    611   10000 0x60ca9ff0
+110       PoolAllocCompactor 24/24/1 evsu         1    115    1024 0x60cacb20
+111           JBRJSONService 24/24/1    q       206   1107    6144 0x60cacf30
+112              JBRPairInit 24/24/1    q         2    819    4096 0x60caf258
+113                JBRCSInit 24/24/1    q         1    715    4096 0x60cb0268
+114    JBR_XML_Parser_thread 24/24/1    q         2    171    4096 0x60cb1278
+115            JBRGetHandler 24/24/1    q         1    171    4096 0x60cb2f80
+116             ipodOBServer 24/24/1 susp         0     75    4096 0x60cb41e0
+117       PoolAllocCompactor 24/24/1 evsu         1    115    1024 0x60cb5600
+118           ConfigureTunes 24/24/1    q      2965   2699    4096 0x60cbf610
+119          UPnP TCP Thread 24/24/1  sem       200    635    8192 0x60cc0620
+120         UPnP Evnt Sender 24/24/1    q        78    155    4096 0x60cc2630
+121         UPnP Evnt Thread 24/24/1 evnt        14    171    4096 0x60cc3640
+122         UPnP Disc Thread 24/24/1 evnt       128    659    1024 0x60cb7f70
+123                  pthread 24/23/1  sem      2770   4035    8192 0x60cc59c0
+124                  pthread 24/23/1  sem       230   2563    8192 0x60ccd960
+125                  pthread 24/23/1  sem         1   3307    8192 0x60cd9e90
+                Totals                         60661  605152
+Stack usage warnings:  * = within 200 B of stack size  ** = within 100 B
+sds://>
