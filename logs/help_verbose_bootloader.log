@@ -1,0 +1,109 @@
+sds://>
+### Available Commands ###
+help                 - displays all available commands
+bat                  - bat <batch-name>   executes commands written in <batch-name>
+bldr                 - start bootloader menu
+btb                  - btb test commands
+cd                   - cd <dir> - changes current directory to <dir>
+clear                - clear shell history
+dbgprt               - debug print commands
+fburn                - flash burn commands
+fburn bin            - bin
+fburn ebin           - ebin
+fburn img            - image
+fburn listFlashAddr  - list flash burn addresses
+fburn rd             - read
+filetransfer         - File Transfer
+get                  - get [-e] <attributename> - reads value and type of <attributename>
+iperf                - The TCP/UDP Bandwidth Measurement Tool
+ls                   - ls [-r|-n|-e|-v] - shows content of (current) directory
+memfwupdate          - Memory Blob Firmware Update
+net                  - networking (TCP/IP)
+netcfg               - print network settings
+netgen               - network generation (dynamic configuration)
+os                   - KnOS commands
+os blk               - show system memory blocks
+os byte              - show system memory bytes
+os cne               - show cne statistics
+os evt               - show system events
+os flg               - show system event flags
+os free              - do free
+os load              - show system load <time>
+os map               - show system memory map [tcmd|ahb|heap|heapc] [used|leak|reset|free]
+os mchk              - check memory [nodump]
+os mlc               - do malloc
+os mseg              - show memory segments
+os mtype             - show memory type of address
+os q                 - show system queues [reset]
+os running           - go to running mode
+os sem               - show system semaphores
+os shell             - diverts the shell input/output to an other device
+os sleep             - system sleeps for given time
+os standby           - go to standby mode
+os suspend           - go to suspend mode
+os th                - show system threads
+os timer             - show system timers
+os timestamp         - prints current up-time <ms> and time interval since last call
+os uartcfg           - uart control command
+os wp                - deals with software watchpoints
+persparam            - persparam rd <name>             : read integer (name = 4 characters)
+          rds <name>            : read string (name = 4 characters)
+          rdss <name>           : read string (name = string)
+          wr <name> <value>     : write integer (name = 4 characters)
+          wrs <name> <value>    : write string (name = 4 characters)
+          wrss <name> <value>   : write string (name = string)
+          wrb <name> <hex-str>  : write binary string (name = 4 characters, hex-string eg. 0xafc9f0)
+          wrbs <name> <hex-str> : write binary string (name = string, hex-string eg. 0xafc9f0)
+          clr <name>            : clear integer (name = 4 characters)
+          clrs <name>           : clear string (name = 4 characters)
+          check                 : check and update default parameters
+          reset                 : reset parameters to default
+
+ping                 - ping <ip-address>
+probe                - probe <ip-address>
+pwd                  - pwd - shows the complete currently used path
+rd                   - rd <addr> <count> [b|h] - reads <count> values starting at <addr> (b=8bit, h=16bit)
+rdm                  - Execute RDM FileSystem test command
+set                  - set <attributename> <attributevalue> - writes <attributevalue> to config <attributename>
+shell                - shell [-b|-i|-o|-s] - shell configuration
+sys                  - System commands
+sys av               - show the status of AV ports
+sys clock            - show system power mode
+sys if               - show interface status/statistics
+sys llc              - show LLC and iso rx routing table
+sys lpm              - modify low power mode
+sys memdump          - dump memory
+sys memscan          - scan memory
+sys memscanraw       - scan memory
+sys reboot           - reboots the system using PowerManager (soft reset)
+sys reset            - resets the system (hard reset)
+sys sds              - accesses the System Data Service
+sys sds showtree     - displays the tree
+sys swmtx            - switch matrix statistic and handling
+sys sytlog           - show syt log status
+sys tgen             - timing generator commands
+sys tgen dco         - TGen DCO shell commands
+sys tgen dco calib   - calibrates the dco and prints out results
+sys tgen dco genclock - tells a DCO to generate a desired output clock
+sys tgen reg         - show registers
+sys tgen writesysclocks - writes system clock settings to flash, used in next reboot
+sys ver              - show the version of software running
+sys wlan             - wlan related commands
+sys wlan ctrl        - Low level control wireless commands
+sys wlan mib         - Management Information Base related commands
+sys wlan pci         - Test PCI interface
+sys wlan test        - Test commands for Wifi test mode.
+test                 - Test commands
+usb                  - commands related to USB
+usb drv              - Commands related to USB Bus Driver level
+usb host             - USB cmd for host controller
+usb ipod             - Shell cmd for iPod Device
+usb msd              - Shell cmd for MassStorage Device
+usb mtp              - Shell cmd for MTP device
+usb stack            - Shell cmd for USB Stack
+usb test             - USB test commands
+usb test copy        - Shell cmd for USB copy tests
+usb test crc         - Shell cmd for USB CRC tests
+usb test speed       - Shell cmd for USB speed tests
+wpa                  - wpa_supplicant cli
+wr                   - wr <addr> <value> [b|h] - writes <value> to <addr> (b=8bit, h=16bit)

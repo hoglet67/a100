@@ -1,0 +1,136 @@
+
+sds://>
+### Available Commands ###
+help                 - displays all available commands
+JBRemote             -  JB REMOTE COMMANDS
+apple                - apple commands
+ave                  - ave shell commands
+ave iso              - ave iso shell commands
+ave pool             - ave stream block pool shell commands
+ave thread           - ave thread shell commands
+avr                  - avr test command
+bat                  - bat <batch-name>   executes commands written in <batch-name>
+btb                  - btb test commands
+cd                   - cd <dir> - changes current directory to <dir>
+clear                - clear shell history
+dbgprt               - debug print commands
+drc                  - drc [verbose | lines n | refresh n | spi [on|off] ]
+fburn                - flash burn commands
+fburn bin            - bin
+fburn ebin           - ebin
+fburn img            - image
+fburn listFlashAddr  - list flash burn addresses
+fburn rd             - read
+filetransfer         - File Transfer
+get                  - get [-e] <attributename> - reads value and type of <attributename>
+guard                - guard test
+icb                  - ipod content browser
+iperf                - The TCP/UDP Bandwidth Measurement Tool
+ipod                 - Serial iPod access
+ipodauth             - ipod authentication coprocessor
+ls                   - ls [-r|-n|-e|-v] - shows content of (current) directory
+lui                  - LocalUi
+napster              - napster service test connect
+nc                   - nc[play|stop|pause|stat|show]
+net                  - networking (TCP/IP)
+netcfg               - print network settings
+netgen               - network generation (dynamic configuration)
+ntp                  - Ntp
+os                   - KnOS commands
+os blk               - show system memory blocks
+os byte              - show system memory bytes
+os cne               - show cne statistics
+os evt               - show system events
+os flg               - show system event flags
+os free              - do free
+os load              - show system load <time>
+os map               - show system memory map [tcmd|ahb|heap|heapc] [used|leak|reset|free]
+os mchk              - check memory [nodump]
+os mlc               - do malloc
+os mseg              - show memory segments
+os mtype             - show memory type of address
+os q                 - show system queues [reset]
+os running           - go to running mode
+os sem               - show system semaphores
+os shell             - diverts the shell input/output to an other device
+os sleep             - system sleeps for given time
+os standby           - go to standby mode
+os suspend           - go to suspend mode
+os th                - show system threads
+os timer             - show system timers
+os timestamp         - prints current up-time <ms> and time interval since last call
+os uartcfg           - uart control command
+os wp                - deals with software watchpoints
+persparam            - persparam rd <name>             : read integer (name = 4 characters)
+          rds <name>            : read string (name = 4 characters)
+          rdss <name>           : read string (name = string)
+          wr <name> <value>     : write integer (name = 4 characters)
+          wrs <name> <value>    : write string (name = 4 characters)
+          wrss <name> <value>   : write string (name = string)
+          wrb <name> <hex-str>  : write binary string (name = 4 characters, hex-string eg. 0xafc9f0)
+          wrbs <name> <hex-str> : write binary string (name = string, hex-string eg. 0xafc9f0)
+          clr <name>            : clear integer (name = 4 characters)
+          clrs <name>           : clear string (name = 4 characters)
+          check                 : check and update default parameters
+          reset                 : reset parameters to default
+
+ping                 - ping <ip-address>
+probe                - probe <ip-address>
+pwd                  - pwd - shows the complete currently used path
+rd                   - rd <addr> <count> [b|h] - reads <count> values starting at <addr> (b=8bit, h=16bit)
+reg                  - reg test command
+rtp                  - rtp commands
+rtp clk              - Inspect or manipulate RTP time
+
+set                  - set <attributename> <attributevalue> - writes <attributevalue> to config <attributename>
+shell                - shell [-b|-i|-o|-s] - shell configuration
+spilist              - print spi list
+spilog               - print spi log
+ssdp                 - UPNP/SSDP client control [enable, disable, send, setVerbose(x)]
+sys                  - System commands
+sys av               - show the status of AV ports
+sys avfifo           - avfifo shell command
+sys clock            - show system power mode
+sys dma              - dma related commands
+sys if               - show interface status/statistics
+sys irq              - interrupt controller/handling
+sys llc              - show LLC and iso rx routing table
+sys lpm              - modify low power mode
+sys macb             - macb commands
+sys memdump          - dump memory
+sys memscan          - scan memory
+sys memscanraw       - scan memory
+sys pll              - fire pll events
+sys reboot           - reboots the system using PowerManager (soft reset)
+sys reset            - resets the system (hard reset)
+sys sdram            - sdram commands
+sys sds              - accesses the System Data Service
+sys sol              - Sol commands
+sys stream           - iso stream information and config
+sys swmtx            - switch matrix statistic and handling
+sys swx              - ahb switch commands
+sys sytlog           - show syt log status
+sys tgen             - timing generator commands
+sys umr              - umr priority
+sys ver              - show the version of software running
+sys versulu          - print chip version information
+sys wlan             - wlan related commands
+test                 - Test commands
+test BCOApple        - Apple related commands
+test JBRemoteUnitShell - JBRemoteUnitShell commands
+test TestBrowser     - TestBrowser commands
+test rdmtraverse     - traverse rdmfs
+upnp                 - UPNP control point [help]
+usb                  - commands related to USB
+usb drv              - Commands related to USB Bus Driver level
+usb host             - USB cmd for host controller
+usb ipod             - Shell cmd for iPod Device
+usb msd              - Shell cmd for MassStorage Device
+usb mtp              - Shell cmd for MTP device
+usb stack            - Shell cmd for USB Stack
+usb test             - USB test commands
+usbd                 -  usbd
+waaed                - waaed help...
+wpa                  - wpa_supplicant cli
+wr                   - wr <addr> <value> [b|h] - writes <value> to <addr> (b=8bit, h=16bit)
+sds://>
